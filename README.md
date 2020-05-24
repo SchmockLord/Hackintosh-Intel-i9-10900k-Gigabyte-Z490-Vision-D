@@ -26,5 +26,21 @@ Not working so far:
 - Thunderbolt (update soon)
 - Ethernet (update soon)
 
+
+Installation notes:
+1. Create an MacOS Catalina 10.15.4 Installation Stick (just google it)
+2. Delete Installinfo.plist:
+  - Open the "Install macOS Catalina" Disk
+  - Right Click on the package "Install macOS Catalina"
+  - Click on "Package Contents"
+  - Then navigate to Contents > SharedSupport
+  - Delete the Installlnfo.plist
+3. Mount the EFI partition of the Installation Disk (I use Hackintool to mount EFIs)
+4. Copy my EFI folder to the root of the EFI-partition
+5. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
+6. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
+
+
 Best,
-Chris aka SchmockLord
+Chris 
+aka SchmockLord
