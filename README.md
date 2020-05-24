@@ -20,7 +20,7 @@ Hardware:
 
 Working:
 - Wifi and Bluetooth (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
-- Audio: Use AppleALC.kext and Layout-id=11. Bootargument "alcid=11".
+- Audio: Use AppleALC.kext and Layout-id=11. Bootargument "alcid=11"
 
 Bluetooth:
 You need a natively supported Bluetooth card to use Airdrop, Unlock with Apple Watch etc.
