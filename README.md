@@ -1,0 +1,1 @@
+# Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D
