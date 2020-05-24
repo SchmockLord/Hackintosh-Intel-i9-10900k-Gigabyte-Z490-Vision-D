@@ -13,18 +13,18 @@ SMBIOS=MacBookAir9,1
 OpenCore 0.5.8
 
 Hardware:
-Intel i9 10900k
-Gigabyte Z490 Vision D
-Radeon VII
-32GB 
+- Intel i9 10900k
+- Gigabyte Z490 Vision D
+- Radeon VII
+- 32GB 
 
 Working:
-Wifi and Bluetooth (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
+- Wifi and Bluetooth (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
 
 Not working so far:
-Audio (update soon)
-Thunderbolt (update soon)
-Ethernet (update soon)
+- Audio (update soon)
+- Thunderbolt (update soon)
+- Ethernet (update soon)
 
 Best,
 Chris aka SchmockLord
