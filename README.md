@@ -8,15 +8,20 @@ You can find my EFI folder in this repository.
 
 I will update this Build in the next days. The Build is very fresh (3h after the first successfull installation).
 
-SMBIOS=MacBookAir9,1
+SMBIOS=iMac19,1
 
 OpenCore 0.5.8
 
 # Hardware
-- Intel i9 10900k
-- Gigabyte Z490 Vision D
-- Radeon VII
-- 32GB 
+- Intel i9-10900k
+- Gigabyte Z490 Vision D:
+	- Audio: Realtek ALC1220-VB
+	- 1Gbit Ethernet: Intel I219-V
+	- 2.5Gbit Ethernet: Intel I225-V
+	- Two USB-C/Thunderbolt 3 ports
+- RAM: 32GB G.Skill Trident Z 3600Mhz CL15
+- GPU: AMD Radeon VII
+- Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
 
 # Working
 - [x] Wifi and Bluetooth (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
