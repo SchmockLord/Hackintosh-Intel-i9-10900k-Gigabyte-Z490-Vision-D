@@ -24,17 +24,18 @@ OpenCore 0.5.8
 - Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
 
 # Working
-- [x] Wifi and Bluetooth (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
-- [x] Audio: Realtek ALC1220-VB (AppleALC.kext, layout-id=7, device-id=0xA170, FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
-- [x] USB, all ports except the USB 2.0 on the rear panel labeled "BIOS". Disabled this due to the 15 port limit.
-- [x] Thunderbolt 3 including Hot-plug
-- [x] 1Gbit Ethernet (Intel I219-V)
-- [x] Sleep/Wake
-- [x] Shutdown
-- [x] Restart
+- [x] **Wifi and Bluetooth** (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
+- [x] **Audio**: Realtek ALC1220-VB (AppleALC.kext, layout-id=7, device-id=0xA170, FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
+- [x] **USB**, all ports except the USB 2.0 on the rear panel labeled "BIOS". Disabled this due to the 15 port limit.
+- [x] **Thunderbolt 3** including Hot-plug
+- [x] **1Gbit Ethernet (Intel I219-V)**
+- [x] **2.5Gbit Ethernet (Intel I225-V)**
+- [x] **Sleep/Wake**
+- [x] **Shutdown**
+- [x] **Restart**
 
 # Not working so far
-- [ ] 2.5Gbit Ethernet (Intel I225-V)
+nothing so far :)
 
 # Details
 
