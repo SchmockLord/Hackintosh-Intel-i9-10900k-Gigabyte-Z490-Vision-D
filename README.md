@@ -129,7 +129,7 @@ The Radeonboost.kext improves the Graphics performance of AMD Radeon cards. I ha
 3. Copy my EFI folder to the root of the EFI-partition
 4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
 5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
-5. Change BIOS-Settings
+5. Change BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
 6. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
 7. If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
  Delete Installinfo.plist on the installer disk:
