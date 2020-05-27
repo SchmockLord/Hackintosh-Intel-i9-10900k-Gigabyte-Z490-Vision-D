@@ -123,6 +123,21 @@ Then start Bluetooth Explorer App, select Tools/HCI Controller Selector. Then yo
 
 The Radeonboost.kext improves the Graphics performance of AMD Radeon cards. I have a Radeon VII and it improved the OpenCL performance by 22% and in Metal by 38%. According to benchmarks with Geekbench 5.1.0.
 
+## Language
+
+Default Keyboard Layout/Language setting was changed to EN-US in v1.5.
+
+If you want to change this, just edit this setting in the config.plist:
+
+```
+- NVRAM
+	- Add
+		- 7C436110-AB2A-4BBB-A880-FE41995C9F82
+			- prev-lang:kbd | String | en-US:0
+```
+
+Valid Keyboard Values see here: [AppleKeyboardLayouts.txt](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
+
 # Installation notes
 1. Create an MacOS Catalina 10.15.4 Installation Stick (just google it)
 2. Mount the EFI partition of the Installation Disk (I use Hackintool to mount EFIs)
