@@ -1,5 +1,7 @@
 # Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D
 
+![About this mac](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/blob/master/Specs.png)
+
 Hello folks,
 
 I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on a Gigabyte Z490 Vision D.
@@ -22,6 +24,12 @@ OpenCore 0.5.8
 - RAM: 32GB G.Skill Trident Z 3600Mhz CL15
 - GPU: AMD Radeon VII
 - Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
+
+## Benchmarks
+
+My Geekbench Profile: https://browser.geekbench.com/user/218488
+
+![Single Core: 1302 | Multi Core: 11406](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/blob/master/Screenshot%202020-05-27%20at%2002.03.21.png)
 
 # Working
 - [x] **Wifi and Bluetooth** (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
