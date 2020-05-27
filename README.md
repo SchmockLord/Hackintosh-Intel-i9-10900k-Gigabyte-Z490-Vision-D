@@ -125,16 +125,26 @@ The Radeonboost.kext improves the Graphics performance of AMD Radeon cards. I ha
 
 # Installation notes
 1. Create an MacOS Catalina 10.15.4 Installation Stick (just google it)
-2. Delete Installinfo.plist:
+2. Mount the EFI partition of the Installation Disk (I use Hackintool to mount EFIs)
+3. Copy my EFI folder to the root of the EFI-partition
+4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
+5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
+5. Change BIOS-Settings
+6. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
+7. If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
+ Delete Installinfo.plist on the installer disk:
   - Open the "Install macOS Catalina" Disk
   - Right Click on the package "Install macOS Catalina"
   - Click on "Package Contents"
   - Then navigate to Contents > SharedSupport
   - Delete the Installlnfo.plist
-3. Mount the EFI partition of the Installation Disk (I use Hackintool to mount EFIs)
-4. Copy my EFI folder to the root of the EFI-partition
-5. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
-6. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
+
+# Credits
+Thanks for your support :) Your help was crucial for my build.
+- the german hackintosh-community at hackintosh-forum.de: Especially dsm2, CMMChris, brumbaer, JimSalabim
+- https://github.com/daliansky/XiaoXinPro-13-hackintosh: This repository inspired my first config and gave me the CPU-FakeID. Thank you for that :)
+- Headkaze for Hackintool and our productive conversations :)
+
 
 
 Best,
