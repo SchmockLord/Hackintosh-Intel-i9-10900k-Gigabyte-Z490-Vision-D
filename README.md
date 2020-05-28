@@ -25,12 +25,6 @@ OpenCore 0.5.8
 - GPU: AMD Radeon VII
 - Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
 
-## Benchmarks
-
-My Geekbench Profile: https://browser.geekbench.com/user/218488
-
-![Single Core: 1302 | Multi Core: 11406](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/blob/master/Screenshot%202020-05-27%20at%2002.03.21.png)
-
 # Working
 - [x] **Wifi and Bluetooth** (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
 - [x] **Audio**: Realtek ALC1220-VB (AppleALC.kext, layout-id=7, device-id=0xA170, FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
@@ -45,7 +39,40 @@ My Geekbench Profile: https://browser.geekbench.com/user/218488
 # Not working so far
 nothing so far :)
 
+# Benchmarks
+
+OC: 5.2Ghz All-Core@1.35V, no Power Limit
+
+### Geekbench
+My Geekbench Profile: https://browser.geekbench.com/user/218488
+
+![Single Core: 1358 | Multi Core: 12127](/Benchmarks/Geekbench.png)
+
+### Cinebench
+
+Cinebench R20 (with OC): 6857 points.
+
+You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 points). The stock 1950x below (6670 points).
+
+![Cinebench R20 (with OC): 6857 points](/Benchmarks/Cinebench R20.png)
+
 # Details
+
+## Installation notes
+1. Create an MacOS Catalina 10.15.4 Installation Stick (just google it)
+2. Mount the EFI partition of the Installation Disk (I use Hackintool to mount EFIs)
+3. Copy my EFI folder to the root of the EFI-partition
+4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
+5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
+5. Change BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
+6. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
+7. If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
+ Delete Installinfo.plist on the installer disk:
+  - Open the "Install macOS Catalina" Disk
+  - Right Click on the package "Install macOS Catalina"
+  - Click on "Package Contents"
+  - Then navigate to Contents > SharedSupport
+  - Delete the Installlnfo.plist
 
 ## Audio
 
@@ -138,21 +165,21 @@ If you want to change this, just edit this setting in the config.plist:
 
 Valid Keyboard Values see here: [AppleKeyboardLayouts.txt](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
 
-# Installation notes
-1. Create an MacOS Catalina 10.15.4 Installation Stick (just google it)
-2. Mount the EFI partition of the Installation Disk (I use Hackintool to mount EFIs)
-3. Copy my EFI folder to the root of the EFI-partition
-4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
-5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
-5. Change BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
-6. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
-7. If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
- Delete Installinfo.plist on the installer disk:
-  - Open the "Install macOS Catalina" Disk
-  - Right Click on the package "Install macOS Catalina"
-  - Click on "Package Contents"
-  - Then navigate to Contents > SharedSupport
-  - Delete the Installlnfo.plist
+# Overclocking Experiences:
+
+The highest Voltage I feel comfortable with for 24/7 is 1.35V.
+
+I unlocked the Power Limit and tried 5.2 and 5.3 Ghz All-Core.
+
+5.3 Ghz crashed in Benchmarks. 5.2Ghz worked. So far everything is working and no further crashing with 5.2Ghz.
+
+
+Temps on idle: 35°C.
+
+Temps while running Cinebench e.g. : 75-80°C.
+
+
+Cooling solution: I have Thermalgrizzly Conductonaut applied, so fluid metal. And I have a custom watercooling loop with 2x 360mm and 1x 480mm radiator. Fans are spinning on minimum RPM until the temps reach 60°C. They reach 100% at 80°C.
 
 # Credits
 Thanks for your support :) Your help was crucial for my build.
