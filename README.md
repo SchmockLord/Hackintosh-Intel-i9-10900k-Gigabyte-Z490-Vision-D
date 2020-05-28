@@ -185,9 +185,11 @@ Cooling solution: I have Thermalgrizzly Conductonaut applied, so fluid metal. An
 Thanks for your support :) Your help was crucial for my build.
 - the german hackintosh-community at hackintosh-forum.de: Especially dsm2, CMMChris, brumbaer, JimSalabim
 - https://github.com/daliansky/XiaoXinPro-13-hackintosh: This repository inspired my first config and gave me the CPU-FakeID. Thank you for that :)
-- Headkaze for Hackintool and our productive conversations :)
-
-
+- [Dortania](https://github.com/dortania) for this great OpenCore Desktop Guide
+- [headkaze](https://github.com/headkaze) for Hackintool and our productive conversations :)
+- [Acidanthera](https://github.com/acidanthera) for too many things to mention each
+- [RehabMan](https://github.com/RehabMan) for too many things to mention each
+- [OpenCore project](https://github.com/OpenCorePkg) for this great bootloader
 
 Best,
 Chris 
