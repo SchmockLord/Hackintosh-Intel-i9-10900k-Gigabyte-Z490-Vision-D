@@ -46,7 +46,7 @@ OC: 5.2Ghz All-Core@1.35V, no Power Limit
 ### Geekbench
 My Geekbench Profile: https://browser.geekbench.com/user/218488
 
-![Single Core: 1358 | Multi Core: 12127](/Benchmarks/Geekbench.png)
+![Geekbench Score with OC](Benchmarks/Geekbench.png)
 
 ### Cinebench
 
@@ -54,7 +54,7 @@ Cinebench R20 (with OC): 6857 points.
 
 You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 points). The stock 1950x below (6670 points).
 
-![Cinebench R20 (with OC): 6857 points](/Benchmarks/Cinebench R20.png)
+![Cinebench R20 Score with OC](Benchmarks/CinebenchR20.png)
 
 # Details
 
