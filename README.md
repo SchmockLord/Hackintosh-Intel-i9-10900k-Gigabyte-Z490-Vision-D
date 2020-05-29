@@ -8,9 +8,9 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-## Current SMBIOS: iMac19,1
+** Current SMBIOS: iMac19,1 **
 
-## Current Bootkloader: OpenCore 0.5.8
+** Current Bootkloader: OpenCore 0.5.8**
 
 # Hardware
 - Intel i9-10900k
