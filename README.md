@@ -36,7 +36,7 @@ You can find my EFI folder in this repository.
 - [x] **Restart**
 
 # Not working so far
-- [ ] **iGPU UHD630 HDMIT-Output**: You cannot use the iGPU to drive your display. So far it is only working for GPU-acceleration like Intel QuickSync technology. Your help is appreciated here :).
+- [ ] **iGPU UHD630 HDMI-Output**: You cannot use the iGPU to drive your display. So far it is only working for GPU-acceleration like Intel QuickSync technology. Your help is appreciated here :).
 
 # Benchmarks
 
