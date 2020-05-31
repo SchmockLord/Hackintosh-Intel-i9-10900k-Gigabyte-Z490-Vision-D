@@ -179,6 +179,7 @@ I unlocked the Power Limit and tried 5.2 and 5.3 Ghz All-Core.
 
 5.3 Ghz crashed in Benchmarks. 5.2Ghz worked. So far everything is working and no further crashing with 5.2Ghz.
 
+5.2 Ghz All-Core is working with 1.31V and is stable so far.
 
 Temps on idle: 35°C.
 
