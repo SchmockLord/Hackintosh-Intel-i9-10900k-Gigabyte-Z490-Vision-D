@@ -30,16 +30,17 @@ You can find my EFI folder in this repository.
 - [x] **Thunderbolt 3** including Hot-plug
 - [x] **1Gbit Ethernet (Intel I219-V)**
 - [x] **2.5Gbit Ethernet (Intel I225-V)**
+- [x] **iGPU UHD630 but no HDMI-output yet**
 - [x] **Sleep/Wake**
 - [x] **Shutdown**
 - [x] **Restart**
 
 # Not working so far
-nothing so far :)
+- [ ] **iGPU UHD630 HDMIT-Output**: You cannot use the iGPU to drive your display. So far it is only working for GPU-acceleration like Intel QuickSync technology. Your help is appreciated here :).
 
 # Benchmarks
 
-OC: 5.2Ghz All-Core@1.35V, no Power Limit
+OC: 5.2Ghz All-Core@1.31V, no Power Limit
 
 ### Geekbench
 My Geekbench Profile: https://browser.geekbench.com/user/218488
@@ -71,6 +72,13 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
   - Click on "Package Contents"
   - Then navigate to Contents > SharedSupport
   - Delete the Installlnfo.plist
+
+## iGPU UHD630
+
+I have managed to enable the iGPU UHD630 but I couldn't get the HDMI-output working. I think this is, because there is no iMac out yet with a 10th Gen Intel with UHD630 so there are no framebuffers implemented yet. But I am no expert in this iGPU because I don't really need it since I have a Radeon VII.
+
+But the UHD630 is shown properly in MacOS and Hackintool:
+![iGPU](/Docs/iGPU-enabled.png)
 
 ## Audio
 
