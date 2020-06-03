@@ -22,7 +22,7 @@ You can find my EFI folder in this repository.
 - Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
 
 # Working
-- [x] **Wifi and Bluetooth** (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card)
+- [x] **Wifi and Bluetooth** (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card). Replacing the onboard Intel WiFi-card doesn't work. See details below.
 - [x] **Audio**: Realtek ALC1220-VB (AppleALC.kext, layout-id=7, device-id=0xA170, FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
 - [x] **USB**, all ports except the USB 2.0 on the rear panel labeled "BIOS". Disabled this due to the 15 port limit.
 - [x] **Thunderbolt 3** including Hot-plug
@@ -137,6 +137,8 @@ All ports are enabled, except for the USB 2.0 port that is labeled "BIOS" and in
 
 ## Wifi/Bluetooth
 You need natively supported Wifi and Bluetooth to use Airdrop, Unlock with Apple Watch etc.
+
+Replacing the onboard Intel-Wifi6 card doesn't work because the m.2 slot is a CNVi slot. Which means that it only supports CNVi-cards which are made by Intel. I have tried that already, trust me. You can either Insert a PCI-Express card like the MQUPIN fenvi T919 or buy a special adapter (google for "NGFF to m.2 B+M-Key adapter") to get an Apple-support m.2 card working in one of the m.2 Slots that are meant to be used for m.2 SSDs. Then you also need an adapter cable to get USB-power onto the m.2 adapter to get Bluetooth working.
 
 I used the MQUPIN fenvi T919 Wireless/Bluetooth Card. It has the natively supported WiFi and Bluetooth chip BCM94360CD. 
 
