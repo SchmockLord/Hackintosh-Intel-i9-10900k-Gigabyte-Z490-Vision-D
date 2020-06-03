@@ -78,6 +78,22 @@ I have managed to enable the iGPU UHD630 but I couldn't get the HDMI-output work
 But the UHD630 is shown properly in MacOS and Hackintool:
 ![iGPU](/Docs/iGPU-enabled.png)
 
+I am using these device-properties:
+
+```
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+	<dict>
+		<key>AAPL,ig-platform-id</key>
+		<data>BwCbPg==</data>
+		<key>device-id</key>
+		<data>kj4AAA==</data>
+		<key>framebuffer-patch-enable</key>
+		<data>AQAAAA==</data>
+		<key>model</key>
+		<string>Intel UHD Graphics 630 (Desktop)</string>
+	</dict>
+```
+
 ## Audio
 
 I needed this to get Audio working:
