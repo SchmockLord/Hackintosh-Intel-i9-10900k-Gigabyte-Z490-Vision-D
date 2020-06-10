@@ -134,25 +134,6 @@ The audio device has the PCI-Address PciRoot(0x0)/Pci(0x1F,0x3).
 	</dict>
 ```
 
-## Thunderbolt 3 Support
-
-In your BIOS set the following settings:
-
-Settings/IO-ports/Thunderbolt Configuration
-Discrete Thunderbolt support: Enabled
-
-then
-GPIO3 Force Pwr: Enabled
-Wait time in ms after applying Force Pwr: 200
-GPIO filter: Enabled
-Enable CLK REQ: Enabled
-Enable ASPM: Disabled
-Enable LTR: Disabled
-Enable PTM: Disabled
-Enable TBT ASPM L1.1 & L1.2
-
-You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunerbolt Hotplug support.
-
 ## 1Gbit Ethernet (Intel I219-V)
 
 Simply add the newest IntelMausiEthernet.kext (mine is v2.5.1d1).
@@ -179,6 +160,14 @@ In your USB-configuration this is the port HS14. Either add "uia_exclude=HS14" t
 If it is still not working, download Bluetooth Explorer from Apple Developser (it is inside "Additional_Tools_for_Xcode_11.4.dmg"). 
 
 Then start Bluetooth Explorer App, select Tools/HCI Controller Selector. Then you should be able to see your Bluetooth adapter e.g. Apple BRCM. Select it and press "Activate". If it is marked as "Active" it is working.
+
+## Thunderbolt 3 Support
+
+In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunerbolt Hotplug support.
+
+![Thunderbolt 3 BIOS settings 1](/BIOS-settings/IMG_0120.jpg)
+
+![Thunderbolt 3 BIOS settings 2](/BIOS-settings/IMG_0121.jpg)
 
 ## Radeonboost.kext
 
