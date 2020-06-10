@@ -56,7 +56,7 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 # Details
 
 ## Installation notes
-1. Create an MacOS Catalina 10.15.4 USB-Installer Stick.Do this on a real Mac.
+1. Create an MacOS Catalina 10.15.4 USB-Installer Stick. Do this on a real Mac.
 	- Go into the app store and search for Catalina. Download it. It should download to your Macs application folder.
 	- Plugin a plain vanilla USB-Stick with at least 16GB. My installation needed 8.24GB.
 	- Assuming your stick is called "Untitled".
