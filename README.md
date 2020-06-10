@@ -56,9 +56,21 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 # Details
 
 ## Installation notes
-1. Create an MacOS Catalina 10.15.4 Installation Stick (just google it)
-2. Mount the EFI partition of the Installation Disk (I use Hackintool to mount EFIs)
-3. Copy my EFI folder to the root of the EFI-partition
+1. Create an MacOS Catalina 10.15.4 USB-Installer Stick.Do this on a real Mac.
+	- Go into the app store and search for Catalina. Download it. It should download to your Macs application folder.
+	- Plugin a plain vanilla USB-Stick with at least 16GB. My installation needed 8.24GB.
+	- Assuming your stick is called "Untitled".
+	- Open the terminal and enter this command to create the installer (Replace MyVolume with your USB-sticks name. In this case Untitled: ```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume```
+	- Now there should be a progress bar in the terminal showing the creation process in %. Wait until it is complete.
+	- At the end your USB-stick should be named "Install macOS Catalina".
+
+2. Mount the EFI-partition of the "Install macOS Catalina" disk.
+	- I use Hackintool for this.
+	- Open Hackintool and go to the "Disks" menu. There you should see your disks.
+	- Press the double-arrow in the 6th column to mount the EFI-partition of your installer disk.
+	![Mount EFI with Hackintool](Docs/Mount-EFI.png)
+	
+3. Delete all folders and then copy my EFI folder to the root of the EFI-partition
 4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
 5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
 5. Change BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
