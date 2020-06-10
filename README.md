@@ -10,6 +10,11 @@ You can find my EFI folder in this repository.
 
 **Current Bootloader: OpenCore 0.5.9**
 
+## YouTube Video to this build ## 
+
+I also made a video on how I got macOS running on my build and how I build this rig:
+https://youtu.be/szOofRy7uBc
+
 # Hardware
 - Intel i9-10900k
 - Gigabyte Z490 Vision D:
