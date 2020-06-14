@@ -108,7 +108,7 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>BwCbPg==</data>
+				<data>AACbPg==</data>
 				<key>device-id</key>
 				<data>kj4AAA==</data>
 				<key>framebuffer-patch-enable</key>
@@ -481,7 +481,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>shikigva=80 darkwake=2</string>
+				<string>shikigva=80 darkwake=0</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
