@@ -22,8 +22,8 @@ https://youtu.be/szOofRy7uBc
 	- 1Gbit Ethernet: Intel I219-V
 	- 2.5Gbit Ethernet: Intel I225-V
 	- Two USB-C/Thunderbolt 3 ports
-- RAM: 32GB G.Skill Trident Z 3600Mhz CL15
-- GPU: AMD Radeon VII
+- RAM: 64GB G.Skill Trident Z 3600Mhz CL18
+- GPU: ASRock Phantom Gaming AMD Radeon VII
 - Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
 
 # Working
