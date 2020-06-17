@@ -124,9 +124,9 @@ And then you should either use ```USBInjectAll.kext``` + ```SSDT-UIAC.aml``` + `
 
 BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most of the time ```SSDT-EC.aml``` and ```SSDT-EC-DESKTOP.aml``` have the same purpose. 
 
-1. Use ```SBInjectAll.kext``` without ```SSDT-UIAC.aml```. The ```SSDT-EC-USBX.aml``` should stay at this time, your system might become unbootable without the ```SDT-EC-USBX.aml``` otherwise. But delete ```USBPorts.kext``` and ```SSDT-UIAC.aml```.
+1. Before we start with the configuration you should use the ```USBInjectAll.kext``` without ```SSDT-UIAC.aml```. The ```SSDT-EC-USBX.aml``` should stay at this time, your system might become unbootable without the ```SDT-EC-USBX.aml```. But delete ```USBPorts.kext``` and ```SSDT-UIAC.aml```.
 
-2. Open Hackintool and go to USB-section. Normally you see much more than 15 entries here and also the Connector-column contains wrong definitions.
+2. Open Hackintool and go to the USB-section. Normally you see much more than 15 entries here and also the Connector-column contains wrong definitions.
 
 3. Press the broom-icon to clear the USB-port section and then the refresh icon. Your USB-port section should look similar to this and is showing much more ports than the allowed number of 15 and a wrong connector definition:
 
@@ -134,7 +134,19 @@ BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most
 
 4. Depending on what ports you have, you should have a USB2, a USB3 and a USBC device. 
 
-5. Now plugin the USB2 stick into all USB2/USB3 ports. They should be highlighted green in Hackintool. For all the green ones set the connector type to "USB2" first. Then plugin the USB3-stick into all USB2/USB3 ports. All ports, where you see your USB3-stick shown in the device column, should then be set to "USB3". So if you have a port that supports USB2 and USB3, you should set it to the higher standard, so "USB3". At last you plugin the USBC-stick into all the USBC-ports. Plug them in  both ways. If your stick appears at the same port in both direction, set it to "TypeC+SW". If two different ports show the device when you plug in the stick in both directions in the same port, set both to "TypeC".
+5. Now plug in the USB2 stick into all USB2/USB3 ports. Once connected the ports should be highlighted green in Hackintool. 
+
+For all the green ones set the connector type to "USB2" first. 
+
+Then plugin the USB3-stick into all USB2/USB3 ports. 
+
+All ports, where you see your USB3-stick shown in the device column, should then be set to "USB3". So if you have a port that supports USB2 and USB3, you should set it to the higher standard, so "USB3". 
+
+At last you plugin the USBC-stick into all the USBC-ports. Plug them in  both ways. 
+
+If your stick appears at the same port in both direction, set it to "TypeC+SW". 
+
+If two different ports show the device when you plug in the stick in both directions in the same port, set both to "TypeC".
 
 6. Now you need to limit the number of ports/entries to 15. Thunderbolt-ports (eg. "SSP1" or "SSP2") don't count into the 15 port limit. So now you need to decide for yourself, which of the ports you don't need so much. E.g. I have deleted the USB2-port that is labeled "BIOS" because I prefer to keep a faster USB3 port over a USB2 port.
 
