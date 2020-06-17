@@ -87,6 +87,65 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
   - Click on "Package Contents"
   - Then navigate to Contents > SharedSupport
   - Delete the Installlnfo.plist
+  
+## Fixing Sleep/Wake 
+
+In this section I wanna share with you, how I got my Sleep/Wake working properly. 
+
+I am using ```darkwake=8``` as bootargument.
+
+I have read that ```darkwake=8``` should be obsolete since Mojave, but somehow this did the trick for me at the end. I tried other values as well: ```darkwake=0,2``` and ```no darkwake```. But only with ```darkwake=8``` my PC keeps sleeping.
+
+I also had to use ```SSDT-Disable-CNVW.aml``` to disable the m.2 slot where the onboard Intel Wifi 6 sits, because the CNVi device was constantly waking up my PC.
+
+In addition, I set the following settings in Hackintool. You can edit them by clicking on the value, but it has a very small "clickable" area:
+
+![Hackintool Power Settings](/Docs/Hackintool-power-settings.png)
+
+### Energy Saver Settings ###
+
+![Energy Saver settings](/Docs/Energy-saver-settings.png)
+
+### Bluetooth Settings ###
+
+![Bluetooth Advanced settings](/Docs/Bluetooth-settings.png)
+
+### Proper USB-port configuration ###
+
+First of all, you should have a proper USB configuration. If you use the same board as I do (Gigabyte Z490 Vision D), you can use my SSDT-UIAC.aml.
+
+If you use a different Z490 board, you should delete the SSDT-UIAC.aml because this is a specific USB-configuration for my board. 
+
+Then I recommend you to do the configuration with Hackintool.
+
+At the end of this configuration, Hackintool will generate a USBPorts.kext and a SSDT-UIAC.aml and SSDT-EC-USBX.dsl.
+
+And then you should either use ```USBInjectAll.kext``` + ```SSDT-UIAC.aml``` + ```SSDT-EC-USBX.aml``` OR the ```USBPorts.kext``` only.
+
+BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most of the time ```SSDT-EC.aml``` and ```SSDT-EC-DESKTOP.aml``` have the same purpose. 
+
+1. Use ```SBInjectAll.kext``` without ```SSDT-UIAC.aml```. The ```SSDT-EC-USBX.aml``` should stay at this time, your system might become unbootable without the ```SDT-EC-USBX.aml``` otherwise. But delete ```USBPorts.kext``` and ```SSDT-UIAC.aml```.
+
+2. Open Hackintool and go to USB-section. Normally you see much more than 15 entries here and also the Connector-column contains wrong definitions.
+
+3. Press the broom-icon to clear the USB-port section and then the refresh icon. Your USB-port section should look similar to this and is showing much more ports than the allowed number of 15 and a wrong connector definition:
+
+![USB-Ports before Configuration](/Docs/USB-Ports-before-Configuration.png)
+
+4. Depending on what ports you have, you should have a USB2, a USB3 and a USBC device. 
+
+5. Now plugin the USB2 stick into all USB2/USB3 ports. They should be highlighted green in Hackintool. For all the green ones set the connector type to "USB2" first. Then plugin the USB3-stick into all USB2/USB3 ports. All ports, where you see your USB3-stick shown in the device column, should then be set to "USB3". So if you have a port that supports USB2 and USB3, you should set it to the higher standard, so "USB3". At last you plugin the USBC-stick into all the USBC-ports. Plug them in  both ways. If your stick appears at the same port in both direction, set it to "TypeC+SW". If two different ports show the device when you plug in the stick in both directions in the same port, set both to "TypeC".
+
+6. Now you need to limit the number of ports/entries to 15. Thunderbolt-ports (eg. "SSP1" or "SSP2") don't count into the 15 port limit. So now you need to decide for yourself, which of the ports you don't need so much. E.g. I have deleted the USB2-port that is labeled "BIOS" because I prefer to keep a faster USB3 port over a USB2 port.
+
+7. When you are done, your Hackintool should look like this:
+
+![USB-Ports before Configuration](/Docs/USB-Ports-after-Configuration.png)
+
+8. Now click the export button. This will generate a ```USBPorts.kext```, a ```SSDT-EC-USBX.aml``` and a ```SSDT-UIAC.aml```. Now you either 
+a) Use only the ```USBPorts.kext``` (and delete ```USBInjectall.kext```, ```SSDT-EC-USBX.aml``` and ```SSDT-UIAC.aml```)
+Or
+b) Use ```USBInjectall.kext``` + ```SSDT-EC-USBX.aml``` + ```SSDT-UIAC.aml```.
 
 ## iGPU UHD630
 
