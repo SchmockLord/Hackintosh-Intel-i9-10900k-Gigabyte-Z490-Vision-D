@@ -134,19 +134,7 @@ BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most
 
 4. Depending on what ports you have, you should have a USB2, a USB3 and a USBC device. 
 
-5. Now plug in the USB2 stick into all USB2/USB3 ports. Once connected the ports should be highlighted green in Hackintool. 
-
-For all the green ones set the connector type to "USB2" first. 
-
-Then plugin the USB3-stick into all USB2/USB3 ports. 
-
-All ports, where you see your USB3-stick shown in the device column, should then be set to "USB3". So if you have a port that supports USB2 and USB3, you should set it to the higher standard, so "USB3". 
-
-At last you plugin the USBC-stick into all the USBC-ports. Plug them in  both ways. 
-
-If your stick appears at the same port in both direction, set it to "TypeC+SW". 
-
-If two different ports show the device when you plug in the stick in both directions in the same port, set both to "TypeC".
+5. Now plug in the USB2 stick into all USB2/USB3 ports. Once connected the ports should be highlighted green in Hackintool. For all the green ones set the connector type to "USB2" first. Then plugin the USB3-stick into all USB2/USB3 ports. All ports, where you see your USB3-stick shown in the device column, should then be set to "USB3". So if you have a port that supports USB2 and USB3, you should set it to the higher standard, so "USB3". At last you plugin the USBC-stick into all the USBC-ports. Plug them in  both ways. If your stick appears at the same port in both direction, set it to "TypeC+SW". If two different ports show the device when you plug in the stick in both directions in the same port, set both to "TypeC".
 
 6. Now you need to limit the number of ports/entries to 15. Thunderbolt-ports (eg. "SSP1" or "SSP2") don't count into the 15 port limit. So now you need to decide for yourself, which of the ports you don't need so much. E.g. I have deleted the USB2-port that is labeled "BIOS" because I prefer to keep a faster USB3 port over a USB2 port.
 
