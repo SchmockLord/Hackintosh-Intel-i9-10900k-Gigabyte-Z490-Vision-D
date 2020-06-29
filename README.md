@@ -8,7 +8,7 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.5.9**
+**Current Bootloader: OpenCore 0.6.0**
 
 ## YouTube Video to this build ## 
 
@@ -27,6 +27,7 @@ https://youtu.be/szOofRy7uBc
 - Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
 
 # Working
+- [x] **Tested with macOS Catalina and macOS Big Sur**
 - [x] **Wifi and Bluetooth** (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card). Replacing the onboard Intel WiFi-card doesn't work. See details below.
 - [x] **Audio**: Realtek ALC1220-VB (AppleALC.kext, layout-id=7, device-id=0xA170, FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
 - [x] **USB**, all ports except the USB 2.0 on the rear panel labeled "BIOS". Disabled this due to the 15 port limit.
