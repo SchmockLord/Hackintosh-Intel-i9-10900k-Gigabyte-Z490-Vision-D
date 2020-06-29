@@ -1,6 +1,6 @@
 # Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D
 
-![About this mac](/Docs/Specs.png)
+![About this mac](/Docs/macOSBigSur.png)
 
 Hello folks,
 
