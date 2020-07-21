@@ -16,14 +16,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enables native NVRAM support</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-PMC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Disables the CNVi Slot where the onboard m.2 Intel Wifi 6 card sits</string>
 				<key>Enabled</key>
 				<true/>

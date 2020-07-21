@@ -148,6 +148,12 @@ a) Use only the ```USBPorts.kext``` (and delete ```USBInjectall.kext```, ```SSDT
 Or
 b) Use ```USBInjectall.kext``` + ```SSDT-EC-USBX.aml``` + ```SSDT-UIAC.aml```.
 
+I have pre-configured two USB-mappings for you: 
+
+**Alternative 1)** ```SSDT-UIAC-alternative1-USB-mapping.aml``` (same as the SSDT-UIAC.aml of earlier releases): All USB 2/3 and USBC-ports are working. But I have disabled the USB2 support on the USBC ports. So you won't be able to use USB2 devices behind a USBC-Hub and you won't see your iPhone/iPad in Finder when you connect them to the USBC ports. 
+
+**Alternative 2)** ```SSDT-UIAC-alternative2-USB-mapping.aml```:  This adds USB 2.0 support also for the USBC-ports, so now you connect your iPhones/iPads on the USB-C ports and will be see it in the Finder. But I had to do compromises to stay under the 15 port limit and disabled the back panel USB 2.0 ports (black) and the onboard USB 2.0 ports.
+
 ## iGPU UHD630
 
 I have managed to enable the iGPU UHD630 but I couldn't get the HDMI-output working. I think this is, because there is no iMac out yet with a 10th Gen Intel with UHD630 so there are no framebuffers implemented yet. But I am no expert in this iGPU because I don't really need it since I have a Radeon VII.
@@ -155,7 +161,11 @@ I have managed to enable the iGPU UHD630 but I couldn't get the HDMI-output work
 But the UHD630 is shown properly in MacOS and Hackintool:
 ![iGPU](/Docs/iGPU-enabled.png)
 
-I am using these device-properties:
+When you want to use the iGPU (e.g. if you want SideCar to get an iPad working as wireless display), you need to change your SMBIOS to iMac19,1 and add the following device-properties in your ```config.plist```.
+
+To change the SMBIOS you have to change set your ```SystemProductName```to ```iMac19,1``` (config.plist->PlatformInfo->Generic). You should also generate new serials when you change your SMBIOS.
+
+And add the following the device-properties to your ```config.plist``` (config.plist->DeviceProperties): 
 
 ```
 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
