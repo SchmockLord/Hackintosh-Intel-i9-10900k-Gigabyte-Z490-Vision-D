@@ -308,7 +308,7 @@
 				<key>Comment</key>
 				<string>Boost the performance of AMD GPUs</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
