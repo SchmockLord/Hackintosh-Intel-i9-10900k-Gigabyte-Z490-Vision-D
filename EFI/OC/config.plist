@@ -306,9 +306,9 @@
 				<key>BundlePath</key>
 				<string>RadeonBoost.kext</string>
 				<key>Comment</key>
-				<string>Boost the performance of AMD GPUs</string>
+				<string>Boosts the performance of AMD GPUs. Might not work with Navi-based AMD GPUs, especially on 10.15.6.</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
