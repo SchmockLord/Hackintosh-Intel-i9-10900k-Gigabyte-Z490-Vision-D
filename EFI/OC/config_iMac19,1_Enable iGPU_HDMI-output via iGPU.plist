@@ -248,7 +248,7 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>AwDImw==</data>
+				<data>BwCbPg==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x1)/Pci(0x0, 0x0)</key>
 			<dict>
@@ -906,17 +906,17 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02052700CDJG36A8</string>
+			<string>C02023200J9LNV9A8</string>
 			<key>ROM</key>
 			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>iMacPro1,1</string>
+			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02DWZYPHX87</string>
+			<string>C02CTBY0JV3Q</string>
 			<key>SystemUUID</key>
-			<string>71885723-6C98-4D96-BD31-944E81D4D777</string>
+			<string>9375A950-00CE-4EA6-B1AF-CA4840BFF6BC</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
