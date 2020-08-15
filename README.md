@@ -113,11 +113,21 @@ In addition, I set the following settings in Hackintool. You can edit them by cl
 
 ### Proper USB-port configuration ###
 
-First of all, you should have a proper USB configuration. If you use the same board as I do (Gigabyte Z490 Vision D), you can use my SSDT-UIAC.aml.
+I have created 3 alternative USB-port configurations for the Gigabyte Z490 Vision D. . Just set the ```SSDT-UIAC-xxx.aml``` to enabled for the one you want to use. 
 
-If you use a different Z490 board, you should delete the SSDT-UIAC.aml because this is a specific USB-configuration for my board. 
+#### Alternative 1 ####
 
-Then I recommend you to do the configuration with Hackintool.
+![USB-Port Configuration Alternative 1](/Docs/USB-port-Configuration-Alternative-1.png)
+
+#### Alternative 2 ####
+
+![USB-Port Configuration Alternative 2](/Docs/USB-port-Configuration-Alternative-2.png)
+
+#### Alternative 3 ####
+
+![USB-Port Configuration Alternative 3](/Docs/USB-port-Configuration-Alternative-3.png)
+
+If you want to use this EFI-folder for a different Z490 Board, you should create your own ```SSDT-UIAC.aml``` with Hackintool.
 
 At the end of this configuration, Hackintool will generate a USBPorts.kext and a SSDT-UIAC.aml and SSDT-EC-USBX.dsl.
 
@@ -147,12 +157,6 @@ BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most
 a) Use only the ```USBPorts.kext``` (and delete ```USBInjectall.kext```, ```SSDT-EC-USBX.aml``` and ```SSDT-UIAC.aml```)
 Or
 b) Use ```USBInjectall.kext``` + ```SSDT-EC-USBX.aml``` + ```SSDT-UIAC.aml```.
-
-I have pre-configured two USB-mappings for you: 
-
-**Alternative 1)** ```SSDT-UIAC-alternative1-USB-mapping.aml``` (same as the SSDT-UIAC.aml of earlier releases): All USB 2/3 and USBC-ports are working. But I have disabled the USB2 support on the USBC ports. So you won't be able to use USB2 devices behind a USBC-Hub and you won't see your iPhone/iPad in Finder when you connect them to the USBC ports. 
-
-**Alternative 2)** ```SSDT-UIAC-alternative2-USB-mapping.aml```:  This adds USB 2.0 support also for the USBC-ports, so now you connect your iPhones/iPads on the USB-C ports and will be see it in the Finder. But I had to do compromises to stay under the 15 port limit and disabled the back panel USB 2.0 ports (black) and the onboard USB 2.0 ports.
 
 ## iGPU UHD630
 
