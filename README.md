@@ -65,31 +65,47 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 
 1. Create an MacOS Catalina 10.15.4 USB-Installer Stick. Do this on a real Mac.
 	- Go into the app store and search for Catalina. Download it. It should download to your Macs application folder.
+		- (You can use the 10.15.5 or 10.15.6 Catalina installer equally well.)
 	- Plugin a plain vanilla USB-Stick with at least 16GB. My installation needed 8.24GB.
-	- Assuming your stick is called "Untitled".
-	- Open the terminal and enter this command to create the installer (Replace MyVolume with your USB-sticks name. In this case Untitled: ```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume```
+	- The following assumes your USB stick is called "MyVolume".
+	- Check that "MyVolume" is partitioned with GUID. [Technical Note: GUID Format](TechnicalNotes.md/#technical-note-installation--guid-format)
+	- Open the terminal and enter this command to create the installer (Replace "MyVolume" with your USB-sticks name. In this case Untitled: ```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume```
 	- Now there should be a progress bar in the terminal showing the creation process in %. Wait until it is complete.
 	- At the end your USB-stick should be named "Install macOS Catalina".
 
 2. Mount the EFI-partition of the "Install macOS Catalina" disk.
 	- I use Hackintool for this.
 	- Open Hackintool and go to the "Disks" menu. There you should see your disks.
-	- Press the double-arrow in the 6th column to mount the EFI-partition of your installer disk.
+	- Press the double-arrow in the 6th column on the USB disk to mount the EFI-partition of your installer disk.
 	![Mount EFI with Hackintool](Docs/Mount-EFI.png)
 	
-3. Delete all folders and then copy my EFI folder to the root of the EFI-partition
-4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store, other altenatives are [XCode](https://developer.apple.com/support/xcode/) or [ProperTree](https://github.com/corpnewt/ProperTree))
-5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
-5. Change BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
-6. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
-7. If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
+3. Delete all folders and then copy my entire EFI folder to the root of the EFI-partition
+4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store but other alternatives are [XCode](https://developer.apple.com/support/xcode/) or [ProperTree](https://github.com/corpnewt/ProperTree))
+5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator. [Technical Note: Serial Numbers](TechnicalNotes.md/#technical-note-installation--serial-numbers)
+6. Make a backup of this altered EFI folder which includes your unique serial number changes.
+7. Adjust your BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
+8. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
+9. If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
  Delete Installinfo.plist on the installer disk:
   - Open the "Install macOS Catalina" Disk
   - Right Click on the package "Install macOS Catalina"
   - Click on "Package Contents"
   - Then navigate to Contents > SharedSupport
   - Delete the Installlnfo.plist
-  
+
+
+## Post Istall
+
+Once you have installed MacOS Catalina onto your hackintosh's drive you should repeat the same steps above of installing the EFI folder onto it's EFI-partition:
+
+  - (Don't have two EFI partitions mounted at the same time since it can confuse things)
+  - Mount the EFI-partition of your hackintosh's drive (ie of the drive you installed Catalina onto)
+  - Replace the entire contents of this EFI-partition with the your specialized entire EFI folder (which includes your own unique serial numbers)
+
+Now your hackintosh can boot without the USB install stick.
+
+Then following the other sections below you might want to investigate a GUI boot menu, a boot chime, and other post install niceties. (See [dortania post install cosmetics](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#opencore-beauty-treatment))
+
 ## Fixing Sleep/Wake 
 
 In this section I wanna share with you, how I got my Sleep/Wake working properly. 
@@ -192,13 +208,13 @@ You also have to disable the onboard Intel Bluetooth.
 
 In your USB-configuration this is the port HS14. Either add "uia_exclude=HS14" to your Boot-arguments or generate a USBPorts.kext with Hackintool and remove HS14. 
 
-If it is still not working, download Bluetooth Explorer from Apple Developser (it is inside "Additional_Tools_for_Xcode_11.4.dmg"). 
+If it is still not working, download Bluetooth Explorer from Apple Developer (it is inside "Additional_Tools_for_Xcode_11.4.dmg"). 
 
 Then start Bluetooth Explorer App, select Tools/HCI Controller Selector. Then you should be able to see your Bluetooth adapter e.g. Apple BRCM. Select it and press "Activate". If it is marked as "Active" it is working.
 
 ## Thunderbolt 3 Support
 
-In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunerbolt Hotplug support.
+In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunderbolt Hotplug support.
 
 ![Thunderbolt 3 BIOS settings 1](BIOS-settings/IMG_0120.jpg)
 
