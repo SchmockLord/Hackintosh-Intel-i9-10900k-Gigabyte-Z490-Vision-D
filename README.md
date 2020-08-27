@@ -1,6 +1,6 @@
 # Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D
 
-![About this mac](/Docs/macOSBigSur.png)
+![About this mac](Docs/macOSBigSur.png)
 
 Hello folks,
 
@@ -101,15 +101,15 @@ I also had to use ```SSDT-Disable-CNVW.aml``` to disable the m.2 slot where the 
 
 In addition, I set the following settings in Hackintool. You can edit them by clicking on the value, but it has a very small "clickable" area:
 
-![Hackintool Power Settings](/Docs/Hackintool-power-settings.png)
+![Hackintool Power Settings](Docs/Hackintool-power-settings.png)
 
 ### Energy Saver Settings ###
 
-![Energy Saver settings](/Docs/Energy-saver-settings.png)
+![Energy Saver settings](Docs/Energy-saver-settings.png)
 
 ### Bluetooth Settings ###
 
-![Bluetooth Advanced settings](/Docs/Bluetooth-settings.png)
+![Bluetooth Advanced settings](Docs/Bluetooth-settings.png)
 
 ### Proper USB-port configuration ###
 
@@ -117,15 +117,15 @@ I have created 3 alternative USB-port configurations for the Gigabyte Z490 Visio
 
 #### Alternative 1 ####
 
-![USB-Port Configuration Alternative 1](/Docs/USB-port-Configuration-Alternative-1.png)
+![USB-Port Configuration Alternative 1](Docs/USB-port-Configuration-Alternative-1.png)
 
 #### Alternative 2 ####
 
-![USB-Port Configuration Alternative 2](/Docs/USB-port-Configuration-Alternative-2.png)
+![USB-Port Configuration Alternative 2](Docs/USB-port-Configuration-Alternative-2.png)
 
 #### Alternative 3 ####
 
-![USB-Port Configuration Alternative 3](/Docs/USB-port-Configuration-Alternative-3.png)
+![USB-Port Configuration Alternative 3](Docs/USB-port-Configuration-Alternative-3.png)
 
 If you want to use this EFI-folder for a different Z490 Board, you should create your own ```SSDT-UIAC.aml``` with Hackintool.
 
@@ -141,7 +141,7 @@ BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most
 
 3. Press the broom-icon to clear the USB-port section and then the refresh icon. Your USB-port section should look similar to this and is showing much more ports than the allowed number of 15 and a wrong connector definition:
 
-![USB-Ports before Configuration](/Docs/USB-Ports-before-Configuration.png)
+![USB-Ports before Configuration](Docs/USB-Ports-before-Configuration.png)
 
 4. Depending on what ports you have, you should have a USB2, a USB3 and a USBC device. 
 
@@ -151,7 +151,7 @@ BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most
 
 7. When you are done, your Hackintool should look like this:
 
-![USB-Ports before Configuration](/Docs/USB-Ports-after-Configuration.png)
+![USB-Ports before Configuration](Docs/USB-Ports-after-Configuration.png)
 
 8. Now click the export button. This will generate a ```USBPorts.kext```, a ```SSDT-EC-USBX.aml``` and a ```SSDT-UIAC.aml```. Now you either 
 a) Use only the ```USBPorts.kext``` (and delete ```USBInjectall.kext```, ```SSDT-EC-USBX.aml``` and ```SSDT-UIAC.aml```)
@@ -163,7 +163,7 @@ b) Use ```USBInjectall.kext``` + ```SSDT-EC-USBX.aml``` + ```SSDT-UIAC.aml```.
 I have managed to enable the iGPU UHD630 but I couldn't get the HDMI-output working. I think this is, because there is no iMac out yet with a 10th Gen Intel with UHD630 so there are no framebuffers implemented yet. But I am no expert in this iGPU because I don't really need it since I have a Radeon VII.
 
 But the UHD630 is shown properly in MacOS and Hackintool:
-![iGPU](/Docs/iGPU-enabled.png)
+![iGPU](Docs/iGPU-enabled.png)
 
 When you want to use the iGPU (e.g. if you want SideCar to get an iPad working as wireless display), you need to change your SMBIOS to iMac19,1 and add the following device-properties in your ```config.plist```.
 
@@ -244,9 +244,9 @@ Then start Bluetooth Explorer App, select Tools/HCI Controller Selector. Then yo
 
 In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunerbolt Hotplug support.
 
-![Thunderbolt 3 BIOS settings 1](/BIOS-settings/IMG_0120.jpg)
+![Thunderbolt 3 BIOS settings 1](BIOS-settings/IMG_0120.jpg)
 
-![Thunderbolt 3 BIOS settings 2](/BIOS-settings/IMG_0121.jpg)
+![Thunderbolt 3 BIOS settings 2](BIOS-settings/IMG_0121.jpg)
 
 ## Radeonboost.kext
 
