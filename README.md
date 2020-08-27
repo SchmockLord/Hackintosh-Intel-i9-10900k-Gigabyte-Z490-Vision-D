@@ -1,6 +1,6 @@
 # Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D
 
-![About this mac](/Docs/macOSBigSur.png)
+![About this mac](Docs/macOSBigSur.png)
 
 Hello folks,
 
@@ -8,7 +8,7 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.6.0**
+**Current Bootloader: OpenCore 0.6.1**
 
 ## YouTube Video to this build ## 
 
@@ -61,34 +61,51 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 
 # Details
 
-## Installation notes
+## Installation steps
+
 1. Create an MacOS Catalina 10.15.4 USB-Installer Stick. Do this on a real Mac.
 	- Go into the app store and search for Catalina. Download it. It should download to your Macs application folder.
+		- (You can use the 10.15.5 or 10.15.6 Catalina installer equally well.)
 	- Plugin a plain vanilla USB-Stick with at least 16GB. My installation needed 8.24GB.
-	- Assuming your stick is called "Untitled".
-	- Open the terminal and enter this command to create the installer (Replace MyVolume with your USB-sticks name. In this case Untitled: ```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume```
+	- The following assumes your USB stick is called "MyVolume".
+	- Check that "MyVolume" is partitioned with GUID. [Technical Note: GUID Format](TechnicalNotes.md/#technical-note-installation--guid-format)
+	- Open the terminal and enter this command to create the installer (Replace "MyVolume" with your USB-sticks name. In this case Untitled: ```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume```
 	- Now there should be a progress bar in the terminal showing the creation process in %. Wait until it is complete.
 	- At the end your USB-stick should be named "Install macOS Catalina".
 
 2. Mount the EFI-partition of the "Install macOS Catalina" disk.
 	- I use Hackintool for this.
 	- Open Hackintool and go to the "Disks" menu. There you should see your disks.
-	- Press the double-arrow in the 6th column to mount the EFI-partition of your installer disk.
+	- Press the double-arrow in the 6th column on the USB disk to mount the EFI-partition of your installer disk.
 	![Mount EFI with Hackintool](Docs/Mount-EFI.png)
 	
-3. Delete all folders and then copy my EFI folder to the root of the EFI-partition
-4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
-5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
-5. Change BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
-6. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
-7. If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
+3. Delete all folders and then copy my entire EFI folder to the root of the EFI-partition
+4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store but other alternatives are [XCode](https://developer.apple.com/support/xcode/) or [ProperTree](https://github.com/corpnewt/ProperTree))
+5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator. [Technical Note: Serial Numbers](TechnicalNotes.md/#technical-note-installation--serial-numbers)
+6. Make a backup of this altered EFI folder which includes your unique serial number changes.
+7. Adjust your BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
+8. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
+9. If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
  Delete Installinfo.plist on the installer disk:
   - Open the "Install macOS Catalina" Disk
   - Right Click on the package "Install macOS Catalina"
   - Click on "Package Contents"
   - Then navigate to Contents > SharedSupport
   - Delete the Installlnfo.plist
-  
+
+
+## Post Istall
+
+Once you have installed MacOS Catalina onto your hackintosh's drive you should repeat the same steps above of installing the EFI folder onto it's EFI-partition:
+
+  - (Don't have two EFI partitions mounted at the same time since it can confuse things)
+  - Mount the EFI-partition of your hackintosh's drive (ie of the drive you installed Catalina onto)
+  - Replace the entire contents of this EFI-partition with the your specialized entire EFI folder (which includes your own unique serial numbers)
+
+Now your hackintosh can boot without the USB install stick.
+
+Then following the other sections below you might want to investigate a GUI boot menu, a boot chime, and other post install niceties. (See [dortania post install cosmetics](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#opencore-beauty-treatment))
+
 ## Fixing Sleep/Wake 
 
 In this section I wanna share with you, how I got my Sleep/Wake working properly. 
@@ -101,69 +118,30 @@ I also had to use ```SSDT-Disable-CNVW.aml``` to disable the m.2 slot where the 
 
 In addition, I set the following settings in Hackintool. You can edit them by clicking on the value, but it has a very small "clickable" area:
 
-![Hackintool Power Settings](/Docs/Hackintool-power-settings.png)
+![Hackintool Power Settings](Docs/Hackintool-power-settings.png)
 
 ### Energy Saver Settings ###
 
-![Energy Saver settings](/Docs/Energy-saver-settings.png)
+![Energy Saver settings](Docs/Energy-saver-settings.png)
 
 ### Bluetooth Settings ###
 
-![Bluetooth Advanced settings](/Docs/Bluetooth-settings.png)
+![Bluetooth Advanced settings](Docs/Bluetooth-settings.png)
 
-### Proper USB-port configuration ###
+## USB
 
-I have created 3 alternative USB-port configurations for the Gigabyte Z490 Vision D. . Just set the ```SSDT-UIAC-xxx.aml``` to enabled for the one you want to use. 
+I use USBInjectAll.kext and created my own SSDT-EC-USBX.aml and SSDT-UIAC.aml using Hackintool 3.4.0.
 
-#### Alternative 1 ####
+All ports are enabled, except for the USB 2.0 port that is labeled "BIOS" and intended to be used to flash the BIOS. I had to disable this to stay within the 15 port USB limit. And I don't need this port as much as the faster ones. BIOS flashing will work anyways, because this is done prior the Bootloader config.
 
-![USB-Port Configuration Alternative 1](/Docs/USB-port-Configuration-Alternative-1.png)
-
-#### Alternative 2 ####
-
-![USB-Port Configuration Alternative 2](/Docs/USB-port-Configuration-Alternative-2.png)
-
-#### Alternative 3 ####
-
-![USB-Port Configuration Alternative 3](/Docs/USB-port-Configuration-Alternative-3.png)
-
-If you want to use this EFI-folder for a different Z490 Board, you should create your own ```SSDT-UIAC.aml``` with Hackintool.
-
-At the end of this configuration, Hackintool will generate a USBPorts.kext and a SSDT-UIAC.aml and SSDT-EC-USBX.dsl.
-
-And then you should either use ```USBInjectAll.kext``` + ```SSDT-UIAC.aml``` + ```SSDT-EC-USBX.aml``` OR the ```USBPorts.kext``` only.
-
-BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most of the time ```SSDT-EC.aml``` and ```SSDT-EC-DESKTOP.aml``` have the same purpose. 
-
-1. Before we start with the configuration you should use the ```USBInjectAll.kext``` without ```SSDT-UIAC.aml```. The ```SSDT-EC-USBX.aml``` should stay at this time, your system might become unbootable without the ```SDT-EC-USBX.aml```. But delete ```USBPorts.kext``` and ```SSDT-UIAC.aml```.
-
-2. Open Hackintool and go to the USB-section. Normally you see much more than 15 entries here and also the Connector-column contains wrong definitions.
-
-3. Press the broom-icon to clear the USB-port section and then the refresh icon. Your USB-port section should look similar to this and is showing much more ports than the allowed number of 15 and a wrong connector definition:
-
-![USB-Ports before Configuration](/Docs/USB-Ports-before-Configuration.png)
-
-4. Depending on what ports you have, you should have a USB2, a USB3 and a USBC device. 
-
-5. Now plug in the USB2 stick into all USB2/USB3 ports. Once connected the ports should be highlighted green in Hackintool. For all the green ones set the connector type to "USB2" first. Then plugin the USB3-stick into all USB2/USB3 ports. All ports, where you see your USB3-stick shown in the device column, should then be set to "USB3". So if you have a port that supports USB2 and USB3, you should set it to the higher standard, so "USB3". At last you plugin the USBC-stick into all the USBC-ports. Plug them in  both ways. If your stick appears at the same port in both direction, set it to "TypeC+SW". If two different ports show the device when you plug in the stick in both directions in the same port, set both to "TypeC".
-
-6. Now you need to limit the number of ports/entries to 15. Thunderbolt-ports (eg. "SSP1" or "SSP2") don't count into the 15 port limit. So now you need to decide for yourself, which of the ports you don't need so much. E.g. I have deleted the USB2-port that is labeled "BIOS" because I prefer to keep a faster USB3 port over a USB2 port.
-
-7. When you are done, your Hackintool should look like this:
-
-![USB-Ports before Configuration](/Docs/USB-Ports-after-Configuration.png)
-
-8. Now click the export button. This will generate a ```USBPorts.kext```, a ```SSDT-EC-USBX.aml``` and a ```SSDT-UIAC.aml```. Now you either 
-a) Use only the ```USBPorts.kext``` (and delete ```USBInjectall.kext```, ```SSDT-EC-USBX.aml``` and ```SSDT-UIAC.aml```)
-Or
-b) Use ```USBInjectall.kext``` + ```SSDT-EC-USBX.aml``` + ```SSDT-UIAC.aml```.
+[Alternative Port Configurations](USB-Port-Configuration.md)
 
 ## iGPU UHD630
 
 I have managed to enable the iGPU UHD630 but I couldn't get the HDMI-output working. I think this is, because there is no iMac out yet with a 10th Gen Intel with UHD630 so there are no framebuffers implemented yet. But I am no expert in this iGPU because I don't really need it since I have a Radeon VII.
 
 But the UHD630 is shown properly in MacOS and Hackintool:
-![iGPU](/Docs/iGPU-enabled.png)
+![iGPU](Docs/iGPU-enabled.png)
 
 When you want to use the iGPU (e.g. if you want SideCar to get an iPad working as wireless display), you need to change your SMBIOS to iMac19,1 and add the following device-properties in your ```config.plist```.
 
@@ -217,12 +195,6 @@ The audio device has the PCI-Address PciRoot(0x0)/Pci(0x1F,0x3).
 
 Simply add the newest IntelMausiEthernet.kext (mine is v2.5.1d1).
 
-## USB
-
-I use USBInjectAll.kext and created my own SSDT-EC-USBX.aml and SSDT-UIAC.aml using Hackintool 3.4.0.
-
-All ports are enabled, except for the USB 2.0 port that is labeled "BIOS" and intended to be used to flash the BIOS. I had to disable this to stay within the 15 port USB limit. And I don't need this port as much as the faster ones. BIOS flashing will work anyways, because this is done prior the Bootloader config.
-
 ## Wifi/Bluetooth
 You need natively supported Wifi and Bluetooth to use Airdrop, Unlock with Apple Watch etc.
 
@@ -236,17 +208,17 @@ You also have to disable the onboard Intel Bluetooth.
 
 In your USB-configuration this is the port HS14. Either add "uia_exclude=HS14" to your Boot-arguments or generate a USBPorts.kext with Hackintool and remove HS14. 
 
-If it is still not working, download Bluetooth Explorer from Apple Developser (it is inside "Additional_Tools_for_Xcode_11.4.dmg"). 
+If it is still not working, download Bluetooth Explorer from Apple Developer (it is inside "Additional_Tools_for_Xcode_11.4.dmg"). 
 
 Then start Bluetooth Explorer App, select Tools/HCI Controller Selector. Then you should be able to see your Bluetooth adapter e.g. Apple BRCM. Select it and press "Activate". If it is marked as "Active" it is working.
 
 ## Thunderbolt 3 Support
 
-In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunerbolt Hotplug support.
+In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunderbolt Hotplug support.
 
-![Thunderbolt 3 BIOS settings 1](/BIOS-settings/IMG_0120.jpg)
+![Thunderbolt 3 BIOS settings 1](BIOS-settings/IMG_0120.jpg)
 
-![Thunderbolt 3 BIOS settings 2](/BIOS-settings/IMG_0121.jpg)
+![Thunderbolt 3 BIOS settings 2](BIOS-settings/IMG_0121.jpg)
 
 ## Radeonboost.kext
 
