@@ -61,7 +61,8 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 
 # Details
 
-## Installation notes
+## Installation steps
+
 1. Create an MacOS Catalina 10.15.4 USB-Installer Stick. Do this on a real Mac.
 	- Go into the app store and search for Catalina. Download it. It should download to your Macs application folder.
 	- Plugin a plain vanilla USB-Stick with at least 16GB. My installation needed 8.24GB.
@@ -77,7 +78,7 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 	![Mount EFI with Hackintool](Docs/Mount-EFI.png)
 	
 3. Delete all folders and then copy my EFI folder to the root of the EFI-partition
-4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store)
+4. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store, other altenatives are [XCode](https://developer.apple.com/support/xcode/) or [ProperTree](https://github.com/corpnewt/ProperTree))
 5. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator.
 5. Change BIOS-Settings. See [My BIOS-settings](/bios-settings.md) for reference.
 6. Reboot from the installation media and install macOS. The installation needs Internet. So either install a supported WiFi-card or plugin Ethernet.
@@ -111,52 +112,13 @@ In addition, I set the following settings in Hackintool. You can edit them by cl
 
 ![Bluetooth Advanced settings](Docs/Bluetooth-settings.png)
 
-### Proper USB-port configuration ###
+## USB
 
-I have created 3 alternative USB-port configurations for the Gigabyte Z490 Vision D. . Just set the ```SSDT-UIAC-xxx.aml``` to enabled for the one you want to use. 
+I use USBInjectAll.kext and created my own SSDT-EC-USBX.aml and SSDT-UIAC.aml using Hackintool 3.4.0.
 
-#### Alternative 1 ####
+All ports are enabled, except for the USB 2.0 port that is labeled "BIOS" and intended to be used to flash the BIOS. I had to disable this to stay within the 15 port USB limit. And I don't need this port as much as the faster ones. BIOS flashing will work anyways, because this is done prior the Bootloader config.
 
-![USB-Port Configuration Alternative 1](Docs/USB-port-Configuration-Alternative-1.png)
-
-#### Alternative 2 ####
-
-![USB-Port Configuration Alternative 2](Docs/USB-port-Configuration-Alternative-2.png)
-
-#### Alternative 3 ####
-
-![USB-Port Configuration Alternative 3](Docs/USB-port-Configuration-Alternative-3.png)
-
-If you want to use this EFI-folder for a different Z490 Board, you should create your own ```SSDT-UIAC.aml``` with Hackintool.
-
-At the end of this configuration, Hackintool will generate a USBPorts.kext and a SSDT-UIAC.aml and SSDT-EC-USBX.dsl.
-
-And then you should either use ```USBInjectAll.kext``` + ```SSDT-UIAC.aml``` + ```SSDT-EC-USBX.aml``` OR the ```USBPorts.kext``` only.
-
-BTW: Most have different variations for the ```SSDT-EC-USBX.aml```. I guess most of the time ```SSDT-EC.aml``` and ```SSDT-EC-DESKTOP.aml``` have the same purpose. 
-
-1. Before we start with the configuration you should use the ```USBInjectAll.kext``` without ```SSDT-UIAC.aml```. The ```SSDT-EC-USBX.aml``` should stay at this time, your system might become unbootable without the ```SDT-EC-USBX.aml```. But delete ```USBPorts.kext``` and ```SSDT-UIAC.aml```.
-
-2. Open Hackintool and go to the USB-section. Normally you see much more than 15 entries here and also the Connector-column contains wrong definitions.
-
-3. Press the broom-icon to clear the USB-port section and then the refresh icon. Your USB-port section should look similar to this and is showing much more ports than the allowed number of 15 and a wrong connector definition:
-
-![USB-Ports before Configuration](Docs/USB-Ports-before-Configuration.png)
-
-4. Depending on what ports you have, you should have a USB2, a USB3 and a USBC device. 
-
-5. Now plug in the USB2 stick into all USB2/USB3 ports. Once connected the ports should be highlighted green in Hackintool. For all the green ones set the connector type to "USB2" first. Then plugin the USB3-stick into all USB2/USB3 ports. All ports, where you see your USB3-stick shown in the device column, should then be set to "USB3". So if you have a port that supports USB2 and USB3, you should set it to the higher standard, so "USB3". At last you plugin the USBC-stick into all the USBC-ports. Plug them in  both ways. If your stick appears at the same port in both direction, set it to "TypeC+SW". If two different ports show the device when you plug in the stick in both directions in the same port, set both to "TypeC".
-
-6. Now you need to limit the number of ports/entries to 15. Thunderbolt-ports (eg. "SSP1" or "SSP2") don't count into the 15 port limit. So now you need to decide for yourself, which of the ports you don't need so much. E.g. I have deleted the USB2-port that is labeled "BIOS" because I prefer to keep a faster USB3 port over a USB2 port.
-
-7. When you are done, your Hackintool should look like this:
-
-![USB-Ports before Configuration](Docs/USB-Ports-after-Configuration.png)
-
-8. Now click the export button. This will generate a ```USBPorts.kext```, a ```SSDT-EC-USBX.aml``` and a ```SSDT-UIAC.aml```. Now you either 
-a) Use only the ```USBPorts.kext``` (and delete ```USBInjectall.kext```, ```SSDT-EC-USBX.aml``` and ```SSDT-UIAC.aml```)
-Or
-b) Use ```USBInjectall.kext``` + ```SSDT-EC-USBX.aml``` + ```SSDT-UIAC.aml```.
+[Alternative Port Configurations](USB-Port-Configuration.md)
 
 ## iGPU UHD630
 
@@ -216,12 +178,6 @@ The audio device has the PCI-Address PciRoot(0x0)/Pci(0x1F,0x3).
 ## 1Gbit Ethernet (Intel I219-V)
 
 Simply add the newest IntelMausiEthernet.kext (mine is v2.5.1d1).
-
-## USB
-
-I use USBInjectAll.kext and created my own SSDT-EC-USBX.aml and SSDT-UIAC.aml using Hackintool 3.4.0.
-
-All ports are enabled, except for the USB 2.0 port that is labeled "BIOS" and intended to be used to flash the BIOS. I had to disable this to stay within the 15 port USB limit. And I don't need this port as much as the faster ones. BIOS flashing will work anyways, because this is done prior the Bootloader config.
 
 ## Wifi/Bluetooth
 You need natively supported Wifi and Bluetooth to use Airdrop, Unlock with Apple Watch etc.
