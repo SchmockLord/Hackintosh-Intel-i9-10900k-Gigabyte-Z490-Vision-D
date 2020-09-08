@@ -8,7 +8,7 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.6.1**
+**Current Bootloader: OpenCore 0.6.1 (8th Sep 2020)**
 
 ## YouTube Video to this build ## 
 
@@ -23,7 +23,7 @@ https://youtu.be/szOofRy7uBc
 	- 2.5Gbit Ethernet: Intel I225-V
 	- Two USB-C/Thunderbolt 3 ports
 - RAM: 64GB G.Skill Trident Z 3600Mhz CL18
-- GPU: ASRock Phantom Gaming AMD Radeon VII
+- GPU: ~~ASRock Phantom Gaming AMD Radeon VII~~ Saphire Pulse 5700 XT
 - Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
 
 # Working
