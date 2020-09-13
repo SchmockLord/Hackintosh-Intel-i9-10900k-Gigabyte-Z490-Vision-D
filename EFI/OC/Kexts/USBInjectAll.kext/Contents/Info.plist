@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19F101</string>
+	<string>20A5364e</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>USBInjectAll</string>
 	<key>CFBundleGetInfoString</key>
-	<string>0.7.5 Copyright © 2015 RehabMan. All rights reserved.</string>
+	<string>0.7.6 Copyright © 2015 RehabMan. All rights reserved.</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.rehabman.driver.USBInjectAll</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.7.5</string>
+	<string>0.7.6</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -27,21 +27,21 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>0.7.5</string>
+	<string>0.7.6</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>11E608c</string>
+	<string>11E801a</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>19E258</string>
+	<string>19G68</string>
 	<key>DTSDKName</key>
 	<string>macosx10.15</string>
 	<key>DTXcode</key>
-	<string>1150</string>
+	<string>1170</string>
 	<key>DTXcodeBuild</key>
-	<string>11E608c</string>
+	<string>11E801a</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>ConfigurationData</key>
@@ -6482,6 +6482,64 @@
 			<string>AppleUSBXHCIPCI</string>
 			<key>model</key>
 			<string>iMac19,2</string>
+		</dict>
+		<key>iMac20,1-ABPC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.rehabman.driver.USBInjectAll</string>
+			<key>IOClass</key>
+			<string>USBInjectAll</string>
+			<key>IOProviderClass</key>
+			<string>AppleBusPowerController</string>
+			<key>kName</key>
+			<string>AppleBusPowerController</string>
+			<key>model</key>
+			<string>iMac20,1</string>
+		</dict>
+		<key>iMac20,1-XHC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.rehabman.driver.USBInjectAll</string>
+			<key>IOClass</key>
+			<string>USBInjectAll</string>
+			<key>IONameMatch</key>
+			<array>
+				<string>XHC</string>
+				<string>XHCI</string>
+			</array>
+			<key>IOProviderClass</key>
+			<string>AppleUSBXHCIPCI</string>
+			<key>model</key>
+			<string>iMac20,1</string>
+		</dict>
+		<key>iMac20,2-ABPC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.rehabman.driver.USBInjectAll</string>
+			<key>IOClass</key>
+			<string>USBInjectAll</string>
+			<key>IOProviderClass</key>
+			<string>AppleBusPowerController</string>
+			<key>kName</key>
+			<string>AppleBusPowerController</string>
+			<key>model</key>
+			<string>iMac20,2</string>
+		</dict>
+		<key>iMac20,2-XHC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.rehabman.driver.USBInjectAll</string>
+			<key>IOClass</key>
+			<string>USBInjectAll</string>
+			<key>IONameMatch</key>
+			<array>
+				<string>XHC</string>
+				<string>XHCI</string>
+			</array>
+			<key>IOProviderClass</key>
+			<string>AppleUSBXHCIPCI</string>
+			<key>model</key>
+			<string>iMac20,2</string>
 		</dict>
 		<key>iMac4,1-ABPC</key>
 		<dict>
