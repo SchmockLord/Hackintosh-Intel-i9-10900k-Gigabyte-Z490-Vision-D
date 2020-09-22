@@ -80,7 +80,12 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 	![Mount EFI with Hackintool](Docs/Mount-EFI.png)
 	
 3. Delete all folders and then copy my entire EFI folder to the root of the EFI-partition
-4. Decide for yourself if you want to use the iMac20,2 (EFI/OC/config_iMac20,2_5700XT.plist) or iMacPro1,1 (EFI/OC/config_iMacPro1,1_5700XT.plist). If you don't need SideCar and want to watch Amazon Prime or Netflix in Safari, you should use the iMacPro1,1 config. For everyone else I would recommend the iMac20,2 as this is closer to the real Mac. Rename the config of your choice to ```config.plist```. If you don't rename one and there is no ```config.plist``` it won't work!
+4. Decide for yourself if you want to use
+	- (i) iMacPro1,1: `EFI/OC/config.plist` or
+	- (ii) the iMac19,1: `EFI/OC/config_iMac19,1_iGPU+5700XT.plist` or
+	- (iii) the iMac20,2: `EFI/OC/config_iMac20,2_iGPU+5700XT.plist`
+
+   If you don't need SideCar and want to watch Amazon Prime or Netflix in Safari, you should use the iMacPro1,1 config. For everyone else I would recommend the iMac20,2 as this is closer to the real Mac. Rename the config of your choice to ```config.plist```. If you don't rename one and there is no ```config.plist``` it won't work!
 5. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store but other alternatives are [XCode](https://developer.apple.com/support/xcode/) or [ProperTree](https://github.com/corpnewt/ProperTree))
 6. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator. [Technical Note: Serial Numbers](TechnicalNotes.md/#technical-note-installation--serial-numbers)
 7. Make a backup of this altered EFI folder which includes your unique serial number changes.
