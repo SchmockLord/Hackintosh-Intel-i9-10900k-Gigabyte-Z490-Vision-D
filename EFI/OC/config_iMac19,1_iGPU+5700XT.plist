@@ -160,7 +160,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>RFNEVA==</data>
+				<data>RUdQMA==</data>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -246,6 +246,10 @@
 				<data>BwCbPg==</data>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
 				<key>framebuffer-con0-busid</key>
 				<data>AgAAAA==</data>
 				<key>framebuffer-con0-enable</key>
@@ -282,12 +286,8 @@
 				<data>CQAAAA==</data>
 				<key>framebuffer-con2-type</key>
 				<data>AAQAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
@@ -725,8 +725,7 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array>
-		</array>
+		<array/>
 		<key>Boot</key>
 		<dict>
 			<key>ConsoleAttributes</key>
@@ -765,7 +764,7 @@
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
-			<integer>67</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -788,10 +787,10 @@
 		<dict>
 			<key>SecureBootModel</key>
 			<string>j185f</string>
-			<key>DmgLoading</key>
-			<string>Signed</string>
 			<key>ApECID</key>
 			<integer>0</integer>
+			<key>DmgLoading</key>
+			<string>Signed</string>
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
@@ -894,7 +893,7 @@
 				<key>boot-args</key>
 				<string>shikigva=80 keepsyms=1 debug=0x100 agdpmod=pikera</string>
 				<key>run-efi-updater</key>
-				<string>No</string>
+				<string>NO</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 			</dict>
@@ -957,17 +956,17 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02011701J90000CB</string>
+			<string>C02023200J9LNV9A8</string>
 			<key>ROM</key>
-			<data></data>
+			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
-			<false/>
+			<true/>
 			<key>SystemProductName</key>
-			<string>iMac20,2</string>
+			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02CF02T046M</string>
+			<string>C02CTBY0JV3Q</string>
 			<key>SystemUUID</key>
-			<string>F9E30674-E041-4492-BFB6-49DAAEA71BBD</string>
+			<string>9375A950-00CE-4EA6-B1AF-CA4840BFF6BC</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
