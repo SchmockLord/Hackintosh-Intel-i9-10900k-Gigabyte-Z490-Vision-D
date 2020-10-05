@@ -246,10 +246,6 @@
 				<data>BwCbPg==</data>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
 				<key>framebuffer-con0-busid</key>
 				<data>AgAAAA==</data>
 				<key>framebuffer-con0-enable</key>
@@ -286,8 +282,12 @@
 				<data>CQAAAA==</data>
 				<key>framebuffer-con2-type</key>
 				<data>AAQAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
@@ -540,10 +540,12 @@
 		</array>
 		<key>Emulate</key>
 		<dict>
+			<key>DummyPowerManagement</key>
+			<false/>
 			<key>Cpuid1Data</key>
-			<data>6wYIAAAAAAAAAAAAAAAAAA==</data>
+			<data></data>
 			<key>Cpuid1Mask</key>
-			<data>/////wAAAAAAAAAAAAAAAA==</data>
+			<data></data>
 		</dict>
 		<key>Patch</key>
 		<array>
@@ -690,6 +692,10 @@
 		</array>
 		<key>Quirks</key>
 		<dict>
+			<key>LegacyCommpage</key>
+			<false/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
 			<key>AppleCpuPmCfgLock</key>
 			<true/>
 			<key>AppleXcpmCfgLock</key>
@@ -703,8 +709,6 @@
 			<key>DisableIoMapper</key>
 			<true/>
 			<key>DisableRtcChecksum</key>
-			<false/>
-			<key>DummyPowerManagement</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
@@ -785,12 +789,14 @@
 		</array>
 		<key>Security</key>
 		<dict>
+			<key>EnablePassword</key>
+			<false/>
 			<key>SecureBootModel</key>
-			<string>j185f</string>
-			<key>ApECID</key>
-			<integer>0</integer>
+			<string>Disabled</string>
 			<key>DmgLoading</key>
 			<string>Signed</string>
+			<key>ApECID</key>
+			<integer>0</integer>
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
@@ -893,7 +899,7 @@
 				<key>boot-args</key>
 				<string>shikigva=80 keepsyms=1 debug=0x100 agdpmod=pikera</string>
 				<key>run-efi-updater</key>
-				<string>NO</string>
+				<string>No</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 			</dict>
@@ -953,20 +959,22 @@
 		<true/>
 		<key>Generic</key>
 		<dict>
+			<key>MemoryFormFactor</key>
+			<string>Auto</string>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02023200J9LNV9A8</string>
+			<string>C02011701J90000CB</string>
 			<key>ROM</key>
-			<data>ESIzRFVm</data>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>iMac19,1</string>
+			<string>iMac20,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02CTBY0JV3Q</string>
+			<string>C02CF02T046M</string>
 			<key>SystemUUID</key>
-			<string>9375A950-00CE-4EA6-B1AF-CA4840BFF6BC</string>
+			<string>F9E30674-E041-4492-BFB6-49DAAEA71BBD</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>

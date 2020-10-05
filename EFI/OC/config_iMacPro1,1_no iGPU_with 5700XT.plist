@@ -240,55 +240,6 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>BwCbPg==</data>
-				<key>device-id</key>
-				<data>mz4AAA==</data>
-				<key>framebuffer-con0-busid</key>
-				<data>AgAAAA==</data>
-				<key>framebuffer-con0-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-con0-index</key>
-				<data>AgAAAA==</data>
-				<key>framebuffer-con0-pipe</key>
-				<data>CgAAAA==</data>
-				<key>framebuffer-con0-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-con1-busid</key>
-				<data>BAAAAA==</data>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-con1-index</key>
-				<data>AwAAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>CAAAAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-con2-busid</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-con2-index</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-pipe</key>
-				<data>CQAAAA==</data>
-				<key>framebuffer-con2-type</key>
-				<data>AAQAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
 				<key>acpi-wake-type</key>
@@ -540,10 +491,12 @@
 		</array>
 		<key>Emulate</key>
 		<dict>
+			<key>DummyPowerManagement</key>
+			<false/>
 			<key>Cpuid1Data</key>
-			<data>6wYIAAAAAAAAAAAAAAAAAA==</data>
+			<data></data>
 			<key>Cpuid1Mask</key>
-			<data>/////wAAAAAAAAAAAAAAAA==</data>
+			<data></data>
 		</dict>
 		<key>Patch</key>
 		<array>
@@ -690,6 +643,10 @@
 		</array>
 		<key>Quirks</key>
 		<dict>
+			<key>LegacyCommpage</key>
+			<false/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
 			<key>AppleCpuPmCfgLock</key>
 			<true/>
 			<key>AppleXcpmCfgLock</key>
@@ -703,8 +660,6 @@
 			<key>DisableIoMapper</key>
 			<true/>
 			<key>DisableRtcChecksum</key>
-			<false/>
-			<key>DummyPowerManagement</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
@@ -785,8 +740,10 @@
 		</array>
 		<key>Security</key>
 		<dict>
+			<key>EnablePassword</key>
+			<false/>
 			<key>SecureBootModel</key>
-			<string>j185f</string>
+			<string>Disabled</string>
 			<key>DmgLoading</key>
 			<string>Signed</string>
 			<key>ApECID</key>
@@ -953,20 +910,22 @@
 		<true/>
 		<key>Generic</key>
 		<dict>
+			<key>MemoryFormFactor</key>
+			<string>Auto</string>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02011701J90000CB</string>
+			<string>C02052700CDJG36A8</string>
 			<key>ROM</key>
-			<data></data>
+			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
-			<false/>
+			<true/>
 			<key>SystemProductName</key>
-			<string>iMac20,2</string>
+			<string>iMacPro1,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02CF02T046M</string>
+			<string>C02DWZYPHX87</string>
 			<key>SystemUUID</key>
-			<string>F9E30674-E041-4492-BFB6-49DAAEA71BBD</string>
+			<string>71885723-6C98-4D96-BD31-944E81D4D777</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>

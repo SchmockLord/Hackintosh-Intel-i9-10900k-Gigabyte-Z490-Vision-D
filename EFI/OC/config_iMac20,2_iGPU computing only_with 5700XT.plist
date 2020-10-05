@@ -240,17 +240,17 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>acpi-wake-type</key>
-				<data>AQ==</data>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AwDImw==</data>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>acpi-wake-type</key>
+				<data>AQ==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x1)/Pci(0x0, 0x0)</key>
 			<dict>
@@ -498,10 +498,12 @@
 		</array>
 		<key>Emulate</key>
 		<dict>
+			<key>DummyPowerManagement</key>
+			<false/>
 			<key>Cpuid1Data</key>
-			<data>6wYIAAAAAAAAAAAAAAAAAA==</data>
+			<data></data>
 			<key>Cpuid1Mask</key>
-			<data>/////wAAAAAAAAAAAAAAAA==</data>
+			<data></data>
 		</dict>
 		<key>Patch</key>
 		<array>
@@ -648,6 +650,10 @@
 		</array>
 		<key>Quirks</key>
 		<dict>
+			<key>LegacyCommpage</key>
+			<false/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
 			<key>AppleCpuPmCfgLock</key>
 			<true/>
 			<key>AppleXcpmCfgLock</key>
@@ -661,8 +667,6 @@
 			<key>DisableIoMapper</key>
 			<true/>
 			<key>DisableRtcChecksum</key>
-			<false/>
-			<key>DummyPowerManagement</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
@@ -744,13 +748,13 @@
 		<key>Security</key>
 		<dict>
 			<key>EnablePassword</key>
-			<string>No</string>
+			<false/>
 			<key>SecureBootModel</key>
-			<string>j137</string>
-			<key>ApECID</key>
-			<integer>0</integer>
+			<string>Disabled</string>
 			<key>DmgLoading</key>
 			<string>Signed</string>
+			<key>ApECID</key>
+			<integer>0</integer>
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
@@ -913,20 +917,22 @@
 		<true/>
 		<key>Generic</key>
 		<dict>
+			<key>MemoryFormFactor</key>
+			<string>Auto</string>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02052700CDJG36A8</string>
+			<string>C02011701J90000CB</string>
 			<key>ROM</key>
-			<data>ESIzRFVm</data>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>iMacPro1,1</string>
+			<string>iMac20,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02DWZYPHX87</string>
+			<string>C02CF02T046M</string>
 			<key>SystemUUID</key>
-			<string>71885723-6C98-4D96-BD31-944E81D4D777</string>
+			<string>F9E30674-E041-4492-BFB6-49DAAEA71BBD</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
