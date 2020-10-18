@@ -80,7 +80,10 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 	![Mount EFI with Hackintool](Docs/Mount-EFI.png)
 	
 3. Delete all folders and then copy my entire EFI folder to the root of the EFI-partition
-4. Decide for yourself if you want to use the iMac20,2 (EFI/OC/config_iMac20,2_5700XT.plist) or iMacPro1,1 (EFI/OC/config_iMacPro1,1_5700XT.plist). If you don't need SideCar and want to watch Amazon Prime or Netflix in Safari, you should use the iMacPro1,1 config. For everyone else I would recommend the iMac20,2 as this is closer to the real Mac. Rename the config of your choice to ```config.plist```. If you don't rename one and there is no ```config.plist``` it won't work!
+4. Decide for yourself if you want to use: Rename the config of your choice to ```config.plist```. If you don't rename one and there is no ```config.plist``` it won't work!
+* ```config_iMac20,2_iGPU computing only_with 5700XT.plist```: iGPU for computing only. So you don't have display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
+* ```config_iMac20,2_iGPU with display output_with 5700XT.plist```: iGPU setup for display output, so you will get display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
+* ```config_iMacPro1,1_no iGPU_with 5700XT.plist```: No iGPU. Disable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari works. No Sidecar.
 5. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store but other alternatives are [XCode](https://developer.apple.com/support/xcode/) or [ProperTree](https://github.com/corpnewt/ProperTree))
 6. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator. [Technical Note: Serial Numbers](TechnicalNotes.md/#technical-note-installation--serial-numbers)
 7. Make a backup of this altered EFI folder which includes your unique serial number changes.
@@ -140,7 +143,7 @@ If you want to use the iGPU to drive a display, use the iMac20,2-based config. T
 
 Note that the DisplayPort on the motherboard is no DP-out port. It is a DP-in port and it is only used to connect it to the DP-out of a graphics card to use the DisplayPort to Thunderbolt 3 feature, so you are able to have display output to the USBC/TB3 ports.
 
-These are the device properties in the iMac20,2 config to configure the iGPU as display output:
+These are the device properties in the ```config_iMac20,2_iGPU with display output_with 5700XT.plist``` to configure the iGPU as display output:
 ```
 	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 	<dict>
@@ -194,7 +197,7 @@ These are the device properties in the iMac20,2 config to configure the iGPU as 
 
 ```
 
-And these are the device properties used in the iMacPro1,1 config to configure the iGPU as computing only:
+And these are the device properties used in the ```config_iMac20,2_iGPU computing only_with 5700XT.plist``` to setup the iGPU as computing only:
 ```
 	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 	<dict>
