@@ -4,13 +4,13 @@ Some BIOS-settings are recommended for the Z490 platform in general, and some BI
 
 ## Disable 
 (reference: https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#disable):
-Fast Boot
-Secure Boot
-VT-d (can be enabled if you set DisableIoMapper to YES)
-CSM
-Intel SGX
-Intel Platform Trust
-CFG Lock (MSR 0xE2 write protection)(This must be off, if you can't find the option then enable both AppleCpuPmCfgLock and AppleXcpmCfgLock under Kernel -> Quirks. Your hack will not boot with CFG-Lock enabled)
+- Fast Boot
+- Secure Boot
+- VT-d (can be enabled if you set DisableIoMapper to YES)
+- CSM
+- Intel SGX
+- Intel Platform Trust
+- CFG Lock (requires a newer BIOS version F5 (This must be off, if you can't find the option then enable both AppleCpuPmCfgLock and AppleXcpmCfgLock under Kernel -> Quirks. Your hack will not boot with CFG-Lock enabled)
 
 ## Enable 
 (reference: https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#enable):
@@ -24,8 +24,8 @@ CFG Lock (MSR 0xE2 write protection)(This must be off, if you can't find the opt
 - SATA Mode: AHCI
 
 ## Thunderbolt
-GPIO Force Power: Enabled
-Security: No security
+- GPIO Force Power: Enabled
+- Security: No security
 
 ## iMac20,2-specific settings:
 - Primary Graphics Adapter: PCIE (when you plugin the monitor in the graphics card) or iGPU (when you plugin the monitor to your onboard HDMI)
