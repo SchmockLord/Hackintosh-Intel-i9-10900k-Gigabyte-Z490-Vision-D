@@ -854,7 +854,7 @@
 		<true/>
 		<key>Generic</key>
 		<dict>
-			<key>MemoryFormFactor</key>
+			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>AdviseWindows</key>
 			<false/>
