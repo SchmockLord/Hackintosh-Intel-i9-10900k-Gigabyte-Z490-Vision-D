@@ -43,8 +43,6 @@ I am not saying that you have to set every setting exactly like I did. Just so y
 
 This guide was written with mother board BIOS version number "F3", but others have reported that BIOS version "F5" (the latest at time of writing) works equally well. (It is presumed that BIOS version "F4" would also work equally well.)
 
-![My BIOS-setting 1](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/blob/master/BIOS-settings/IMG_0116.jpg)
-
 ![My BIOS-setting 2](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/blob/master/BIOS-settings/IMG_0117.jpg)
 
 ![My BIOS-setting 3](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/blob/master/BIOS-settings/IMG_0118.jpg)
