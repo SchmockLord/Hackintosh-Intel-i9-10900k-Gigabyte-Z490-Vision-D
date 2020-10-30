@@ -293,10 +293,8 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
-				<key>device-id</key>
-				<data>cKEAAA==</data>
 				<key>layout-id</key>
-				<data>BwAAAA==</data>
+				<integer>28</integer>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -687,7 +685,7 @@
 			<key>LegacyCommpage</key>
 			<false/>
 			<key>DisableLinkeditJettison</key>
-			<false/>
+			<true/>
 			<key>AppleCpuPmCfgLock</key>
 			<true/>
 			<key>AppleXcpmCfgLock</key>
@@ -889,7 +887,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>shikigva=80 keepsyms=1 debug=0x100 agdpmod=pikera</string>
+				<string>shikigva=80 agdpmod=pikera</string>
 				<key>run-efi-updater</key>
 				<string>No</string>
 				<key>csr-active-config</key>
