@@ -84,6 +84,7 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 * ```config_iMac20,2_iGPU computing only_with 5700XT.plist```: iGPU for computing only. So you don't have display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
 * ```config_iMac20,2_iGPU with display output_with 5700XT.plist```: iGPU setup for display output, so you will get display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
 * ```config_iMacPro1,1_no iGPU_with 5700XT.plist```: No iGPU. Disable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari works. No Sidecar.
+
 5. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store but other alternatives are [XCode](https://developer.apple.com/support/xcode/) or [ProperTree](https://github.com/corpnewt/ProperTree))
 6. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator. [Technical Note: Serial Numbers](TechnicalNotes.md/#technical-note-installation--serial-numbers)
 7. Make a backup of this altered EFI folder which includes your unique serial number changes.
