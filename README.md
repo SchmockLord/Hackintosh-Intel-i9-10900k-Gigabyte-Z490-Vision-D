@@ -79,7 +79,7 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 	- Press the double-arrow in the 6th column on the USB disk to mount the EFI-partition of your installer disk.
 	![Mount EFI with Hackintool](Docs/Mount-EFI.png)
 	
-3. Delete all folders and then copy my entire EFI folder to the root of the EFI-partition
+3. Delete all folders and then copy my entire EFI folder to the root of the EFI-partition (make sure you copy the EFI Folder itself, not just the content of it)
 4. Decide for yourself if you want to use: Rename the config of your choice to ```config.plist```. If you don't rename one and there is no ```config.plist``` it won't work!
 * ```config_iMac20,2_iGPU computing only_with 5700XT.plist```: iGPU for computing only. So you don't have display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
 * ```config_iMac20,2_iGPU with display output_with 5700XT.plist```: iGPU setup for display output, so you will get display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
