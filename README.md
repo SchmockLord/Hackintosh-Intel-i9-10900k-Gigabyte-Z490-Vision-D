@@ -8,7 +8,7 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.6.2 (5th Oct 2020)**
+**Current Bootloader: OpenCore 0.6.4**
 
 ## YouTube Video to this build ## 
 
@@ -29,7 +29,7 @@ https://youtu.be/szOofRy7uBc
 # Working
 - [x] **Tested with macOS Catalina 10.15.6 and macOS Big Sur**
 - [x] **Wifi and Bluetooth** (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card). Replacing the onboard Intel WiFi-card doesn't work. See details below.
-- [x] **Audio**: Realtek ALC1220-VB (AppleALC.kext, layout-id=7, device-id=0xA170, FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
+- [x] **Audio**: Realtek ALC1220-VB (AppleALC.kext, layout-id=~~7~~ 28, ~~device-id=0xA170~~, FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
 - [x] **USB**, all ports except the USB 2.0 on the rear panel labeled "BIOS". Disabled this due to the 15 port limit.
 - [x] **Thunderbolt 3** including Hot-plug
 - [x] **1Gbit Ethernet (Intel I219-V)**
@@ -42,6 +42,7 @@ https://youtu.be/szOofRy7uBc
 
 # Not working so far
 - ~~[ ] **iGPU UHD630 HDMI-Output**: You cannot use the iGPU to drive your display. So far it is only working for GPU-acceleration like Intel QuickSync technology. Your help is appreciated here :).~~
+- Netflix and Prime in Safari with iMac20,x based configs.
 
 # Benchmarks
 
@@ -81,9 +82,9 @@ You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 po
 	
 3. Delete all folders and then copy my entire EFI folder to the root of the EFI-partition (make sure you copy the EFI Folder itself, not just the content of it)
 4. Decide for yourself if you want to use: Rename the config of your choice to ```config.plist```. If you don't rename one and there is no ```config.plist``` it won't work!
-* ```config_iMac20,2_iGPU computing only_with 5700XT.plist```: iGPU for computing only. So you don't have display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
-* ```config_iMac20,2_iGPU with display output_with 5700XT.plist```: iGPU setup for display output, so you will get display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
-* ```config_iMacPro1,1_no iGPU_with 5700XT.plist```: No iGPU. Disable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari works. No Sidecar.
+* ```config_iMac20,2_iGPU_computing_only.plist```: iGPU for computing only. So you don't have display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
+* ```config_iMac20,2_iGPU_with display_output.plist```: iGPU setup for display output, so you will get display output to the onboard HDMI. Enable Internal Graphics in BIOS. AppleTV works. Amazon Prime/Netflix via Safari doesn't work, you need other browsers. Sidecar works.
+* ```config_iMacPro1,1_requires AMD GPU.plist```: No iGPU. Disable Internal Graphics in BIOS. Requires discrete AMD GPU. AppleTV works. Amazon Prime/Netflix via Safari works. No Sidecar.
 
 5. Go to EFI/OC and open the config.plist with a plist Editor (I use "PLIST Editor" from the app store but other alternatives are [XCode](https://developer.apple.com/support/xcode/) or [ProperTree](https://github.com/corpnewt/ProperTree))
 6. Within the config.plist navigate to PlatformInfo/Generic and paste your serials for MLB, SystemSerialNumber and SystemUUID. You can generate them with the tool CloverConfigurator. [Technical Note: Serial Numbers](TechnicalNotes.md/#technical-note-installation--serial-numbers)
@@ -144,69 +145,80 @@ If you want to use the iGPU to drive a display, use the iMac20,2-based config. T
 
 Note that the DisplayPort on the motherboard is no DP-out port. It is a DP-in port and it is only used to connect it to the DP-out of a graphics card to use the DisplayPort to Thunderbolt 3 feature, so you are able to have display output to the USBC/TB3 ports.
 
-These are the device properties in the ```config_iMac20,2_iGPU with display output_with 5700XT.plist``` to configure the iGPU as display output:
+These are the device properties in the ```config_iMac20,2_iGPU_with_display output.plist``` to configure the iGPU as display output:
 ```
-	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-	<dict>
-		<key>AAPL,ig-platform-id</key>
-		<data>BwCbPg==</data>
-		<key>device-id</key>
-		<data>mz4AAA==</data>
-		<key>framebuffer-con0-busid</key>
-		<data>AgAAAA==</data>
-		<key>framebuffer-con0-enable</key>
-		<data>AQAAAA==</data>
-		<key>framebuffer-con0-flags</key>
-		<data>xwMAAA==</data>
-		<key>framebuffer-con0-index</key>
-		<data>AgAAAA==</data>
-		<key>framebuffer-con0-pipe</key>
-		<data>CgAAAA==</data>
-		<key>framebuffer-con0-type</key>
-		<data>AAgAAA==</data>
-		<key>framebuffer-con1-busid</key>
-		<data>BAAAAA==</data>
-		<key>framebuffer-con1-enable</key>
-		<data>AQAAAA==</data>
-		<key>framebuffer-con1-flags</key>
-		<data>xwMAAA==</data>
-		<key>framebuffer-con1-index</key>
-		<data>AwAAAA==</data>
-		<key>framebuffer-con1-pipe</key>
-		<data>CAAAAA==</data>
-		<key>framebuffer-con1-type</key>
-		<data>AAgAAA==</data>
-		<key>framebuffer-con2-busid</key>
-		<data>AQAAAA==</data>
-		<key>framebuffer-con2-enable</key>
-		<data>AQAAAA==</data>
-		<key>framebuffer-con2-flags</key>
-		<data>xwMAAA==</data>
-		<key>framebuffer-con2-index</key>
-		<data>AQAAAA==</data>
-		<key>framebuffer-con2-pipe</key>
-		<data>CQAAAA==</data>
-		<key>framebuffer-con2-type</key>
-		<data>AAQAAA==</data>
-		<key>framebuffer-fbmem</key>
-		<data>AACQAA==</data>
-		<key>framebuffer-patch-enable</key>
-		<data>AQAAAA==</data>
-		<key>framebuffer-stolenmem</key>
-		<data>AAAwAQ==</data>
-	</dict>
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+	<key>AAPL,ig-platform-id</key>
+	<data>BwCbPg==</data>
+	<key>device_type</key>
+	<string>VGA compatible controller</string>
+	<key>AAPL,slot-name</key>
+	<string>Internal@0,2,0</string>
+	<key>enable-hdmi20</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con0-busid</key>
+	<data>AgAAAA==</data>
+	<key>framebuffer-con0-enable</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con0-flags</key>
+	<data>xwMAAA==</data>
+	<key>framebuffer-con0-index</key>
+	<data>AgAAAA==</data>
+	<key>framebuffer-con0-pipe</key>
+	<data>CgAAAA==</data>
+	<key>framebuffer-con0-type</key>
+	<data>AAgAAA==</data>
+	<key>framebuffer-con1-busid</key>
+	<data>BAAAAA==</data>
+	<key>framebuffer-con1-enable</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con1-flags</key>
+	<data>xwMAAA==</data>
+	<key>framebuffer-con1-index</key>
+	<data>AwAAAA==</data>
+	<key>framebuffer-con1-pipe</key>
+	<data>CAAAAA==</data>
+	<key>framebuffer-con1-type</key>
+	<data>AAgAAA==</data>
+	<key>framebuffer-con2-busid</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con2-enable</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con2-flags</key>
+	<data>xwMAAA==</data>
+	<key>framebuffer-con2-index</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con2-pipe</key>
+	<data>CQAAAA==</data>
+	<key>framebuffer-con2-type</key>
+	<data>AAgAAA==</data>
+	<key>framebuffer-fbmem</key>
+	<data>AACQAA==</data>
+	<key>framebuffer-patch-enable</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-stolenmem</key>
+	<data>AAAwAQ==</data>
+	<key>framebuffer-unifiedmem</key>
+	<data>AAAAgA==</data>
+	<key>model</key>
+	<string>Intel UHD Graphics 630</string>
+	<key>hda-gfx</key>
+	<string>onboard-1</string>
+```
 
+And these are the device properties used in the ```config_iMac20,2_iGPU_computing_only.plist``` to setup the iGPU as computing only:
 ```
-
-And these are the device properties used in the ```config_iMac20,2_iGPU computing only_with 5700XT.plist``` to setup the iGPU as computing only:
-```
-	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-	<dict>
-		<key>AAPL,ig-platform-id</key>
-		<data>AwDImw==</data>
-		<key>device-id</key>
-		<data>mz4AAA==</data>
-	</dict>
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+	<key>AAPL,ig-platform-id</key>
+	<data>AwDImw==</data>
+	<key>AAPL,slot-name</key>
+	<string>Internal@0,2,0</string>
+	<key>device-id</key>
+	<data>xZsAAA==</data>
+	<key>device_type</key>
+	<string>VGA compatible controller</string>
+	<key>model</key>
+	<string>Intel UHD Graphics 630 (Desktop)</string>
 ```
 
 
@@ -216,25 +228,19 @@ I needed this to get Audio working:
 - AppleALC.kext
 - FakeID.kext
 - FakePCIID_Intel_HDMI_Audio.kext
-- layout-id=7 
-- device-id=0xA170
+- layout-id=~~7~~ 28
+- ~~device-id=0xA170~~
 
 The layout-id and the device-id is injected via the device properties.
 
 The audio device has the PCI-Address PciRoot(0x0)/Pci(0x1F,0x3).
 ```
-<key>DeviceProperties</key>
+<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 	<dict>
-		<key>Add</key>
-		<dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>device-id</key>
-				<data>cKEAAA==</data>
-				<key>layout-id</key>
-				<data>BwAAAA==</data>
-			</dict>
-		</dict>
+	<key>hda-gfx</key>
+	<string>onboard-1</string>
+	<key>layout-id</key>
+	<integer>28</integer>
 	</dict>
 ```
 
@@ -283,21 +289,28 @@ If you want to change this, just edit this setting in the config.plist:
 Valid Keyboard Values see here: [AppleKeyboardLayouts.txt](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
 
 # Overclocking Experiences:
+~~The highest Voltage I feel comfortable with for 24/7 is 1.35V.~~
 
-The highest Voltage I feel comfortable with for 24/7 is 1.35V.
+~~I unlocked the Power Limit and tried 5.2 and 5.3 Ghz All-Core.~~
 
-I unlocked the Power Limit and tried 5.2 and 5.3 Ghz All-Core.
+~~5.3 Ghz crashed in Benchmarks. 5.2Ghz worked. So far everything is working and no further crashing with 5.2Ghz.~~
 
-5.3 Ghz crashed in Benchmarks. 5.2Ghz worked. So far everything is working and no further crashing with 5.2Ghz.
+~~5.2 Ghz All-Core is working with 1.31V and is stable so far.~~
 
-5.2 Ghz All-Core is working with 1.31V and is stable so far.
+~~Temps on idle: 35°C.~~
 
-Temps on idle: 35°C.
+~~Temps while running Cinebench e.g. : 75-80°C.~~
 
-Temps while running Cinebench e.g. : 75-80°C.
+~~Cooling solution: I have Thermalgrizzly Conductonaut applied, so fluid metal. And I have a custom watercooling loop with 2x 360mm and 1x 480mm radiator. Fans are spinning on minimum RPM until the temps reach 60°C. They reach 100% at 80°C.~~
 
-
-Cooling solution: I have Thermalgrizzly Conductonaut applied, so fluid metal. And I have a custom watercooling loop with 2x 360mm and 1x 480mm radiator. Fans are spinning on minimum RPM until the temps reach 60°C. They reach 100% at 80°C.
+My Overclock settings now are:
+- Per Core overclocking:
+	53 when 2 cores are utilized
+	52 when 6 cores are utilized
+	51 with more than 6 cores are utilized
+- voltage offset: -50mV
+- Short Term Power Limit: 250W
+- Long Term Power Limit: 250W
 
 # Credits
 Thanks for your support :) Your help was crucial for my build.
