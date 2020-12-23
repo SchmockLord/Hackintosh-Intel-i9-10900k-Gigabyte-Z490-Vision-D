@@ -267,11 +267,35 @@ Then start Bluetooth Explorer App, select Tools/HCI Controller Selector. Then yo
 
 ## Thunderbolt 3 Support
 
-In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunderbolt Hotplug support.
+In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunderbolt Hotplug support. If you want native-like Thunderbolt 3 support, you also have to flash your TB3 chip on the motherboard with a modified firmware. This will activate the Thunderbolt Bus. Without flashing the TB3-chip on the motherboard your Thunderbolt section will always look like this: https://user-images.githubusercontent.com/642111/101357995-36973200-38d5-11eb-9d8e-bade588eec78.png
+
+### BIOS settings for Thunderbolt 3:
 
 ![Thunderbolt 3 BIOS settings 1](BIOS-settings/IMG_0120.jpg)
 
 ![Thunderbolt 3 BIOS settings 2](BIOS-settings/IMG_0121.jpg)
+
+### To flash your TB3 chip, you need an EEPROM Flasher. The steps are:
+1. Disconnect the PSU
+2. Locate the Thunderbolt chip that you need to flash. [Location of the Thunderbolt chip on a Z490 Vision D](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2117837)
+3. Connect the flasher (instructions below)
+4. Make a backup of your current thunderbolt firmware that is on the chip.
+5. Flash the modified firmware. [Modified Firmware](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2128769)
+6. [Create your custom SSDT-TB3HP.aml](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/page-2183#post-2129797)
+
+### Detailed instructions of the flashing process
+- [Everything you need to know is in here.](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2087524)
+
+- [This set has everything you need for the flashing.](https://www.amazon.de/gp/product/B07SNTL5V6/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
+
+- [Flashing procedure with this flasher.](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/page-1523#post-2079848)
+
+I have also used the following combo. Works as good as the first one.
+- [Flasher.](https://www.amazon.de/gp/product/B07MPY65JN/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
+- [Cables to connect the Flasher to the SOP8 clip.](https://www.amazon.de/gp/product/B01EV70C78/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
+- [The SOP8 clip which will sit on the TB3 chip.](https://www.amazon.de/gp/product/B0713V5GGL/ref=crt_ewc_title_dp_1?ie=UTF8&psc=1&smid=AWLU8WJU8S0VS)
+
+[Flashing procedure with this flasher](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2161463)
 
 ## Language
 
