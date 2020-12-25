@@ -267,20 +267,22 @@ Then start Bluetooth Explorer App, select Tools/HCI Controller Selector. Then yo
 
 ## Thunderbolt 3 Support
 
-In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/OC/ACPI to enable Thunderbolt Hotplug support. If you want native-like Thunderbolt 3 support, you also have to flash your TB3 chip on the motherboard with a modified firmware. This will activate the Thunderbolt Bus. Without flashing the TB3-chip on the motherboard your Thunderbolt section will always look like this: https://user-images.githubusercontent.com/642111/101357995-36973200-38d5-11eb-9d8e-bade588eec78.png
+To get mac-like Thunderbolt 3 support you will need to:
+1) set the BIOS settings properly, 
+2) create your own SSDT for Thunderbolt 3 Hotplug and 
+3) need to flash your Thunderbolt 3 chip with a modified firmware. To flash your Thunderbolt 3 chip, you will need an EEPROM Flasher and another PC/Mac or something like a Rasperry Pi. 
 
-### BIOS settings for Thunderbolt 3:
+Flashing a modified firmware will activate the Thunderbolt Bus. Without flashing the TB3-chip with a modified firmware, you might have issues with Hotplugging some TB3 devices. E.g. I couldn't get hotplug working on my TB3 eGPU case (Razer Core X). I could only get it working when it was connected while booting macOS.
 
-![Thunderbolt 3 BIOS settings 1](BIOS-settings/IMG_0120.jpg)
+Without flashing the TB3-chip on the motherboard your Thunderbolt section will always look like this: ![Thunderbolt section in macOS with no Thunderbolt Bus](https://user-images.githubusercontent.com/642111/101357995-36973200-38d5-11eb-9d8e-bade588eec78.png)
 
-![Thunderbolt 3 BIOS settings 2](BIOS-settings/IMG_0121.jpg)
 
 ### To flash your TB3 chip, you need an EEPROM Flasher. The steps are:
 1. Disconnect the PSU
-2. Locate the Thunderbolt chip that you need to flash. [Location of the Thunderbolt chip on a Z490 Vision D](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2117837)
+2. Locate the Thunderbolt chip that you need to flash: [Location of the Thunderbolt chip on a Z490 Vision D](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2117837)
 3. Connect the flasher (instructions below)
 4. Make a backup of your current thunderbolt firmware that is on the chip.
-5. Flash the modified firmware. [Modified Firmware](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2128769)
+5. Flash the modified firmware: [Modified Firmware](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2128769)
 6. [Create your custom SSDT-TB3HP.aml](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/page-2183#post-2129797)
 
 ### Detailed instructions of the flashing process
@@ -290,12 +292,17 @@ In your BIOS set the following settings. You also need the SSDT-TB3.aml in EFI/O
 
 - [Flashing procedure with this flasher.](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/page-1523#post-2079848)
 
-I have also used the following combo. Works as good as the first one.
+I have also used the following combo. Works as good as the first one:
 - [Flasher.](https://www.amazon.de/gp/product/B07MPY65JN/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
-- [Cables to connect the Flasher to the SOP8 clip.](https://www.amazon.de/gp/product/B01EV70C78/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
-- [The SOP8 clip which will sit on the TB3 chip.](https://www.amazon.de/gp/product/B0713V5GGL/ref=crt_ewc_title_dp_1?ie=UTF8&psc=1&smid=AWLU8WJU8S0VS)
+- [Cables to connect the Flasher to the SOP8 clip](https://www.amazon.de/gp/product/B01EV70C78/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
+- [The SOP8 clip which will sit on the TB3 chip](https://www.amazon.de/gp/product/B0713V5GGL/ref=crt_ewc_title_dp_1?ie=UTF8&psc=1&smid=AWLU8WJU8S0VS)
+- [Flashing procedure with this flasher](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2161463)
 
-[Flashing procedure with this flasher](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/post-2161463)
+### BIOS settings for Thunderbolt 3:
+
+![Thunderbolt 3 BIOS settings 1](BIOS-settings/IMG_0120.jpg)
+
+![Thunderbolt 3 BIOS settings 2](BIOS-settings/IMG_0121.jpg)
 
 ## Language
 
@@ -313,6 +320,18 @@ If you want to change this, just edit this setting in the config.plist:
 Valid Keyboard Values see here: [AppleKeyboardLayouts.txt](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
 
 # Overclocking Experiences:
+
+My Overclock settings now are:
+- Per Core overclocking:
+	53 when 2 cores are utilized
+	52 when 6 cores are utilized
+	51 with more than 6 cores are utilized
+- voltage offset: -50mV
+- Loadline Calibration: Level 3
+- Short Term Power Limit: 250W
+- Long Term Power Limit: 250W
+
+
 ~~The highest Voltage I feel comfortable with for 24/7 is 1.35V.~~
 
 ~~I unlocked the Power Limit and tried 5.2 and 5.3 Ghz All-Core.~~
@@ -326,15 +345,6 @@ Valid Keyboard Values see here: [AppleKeyboardLayouts.txt](https://github.com/ac
 ~~Temps while running Cinebench e.g. : 75-80°C.~~
 
 ~~Cooling solution: I have Thermalgrizzly Conductonaut applied, so fluid metal. And I have a custom watercooling loop with 2x 360mm and 1x 480mm radiator. Fans are spinning on minimum RPM until the temps reach 60°C. They reach 100% at 80°C.~~
-
-My Overclock settings now are:
-- Per Core overclocking:
-	53 when 2 cores are utilized
-	52 when 6 cores are utilized
-	51 with more than 6 cores are utilized
-- voltage offset: -50mV
-- Short Term Power Limit: 250W
-- Long Term Power Limit: 250W
 
 # Credits
 Thanks for your support :) Your help was crucial for my build.
