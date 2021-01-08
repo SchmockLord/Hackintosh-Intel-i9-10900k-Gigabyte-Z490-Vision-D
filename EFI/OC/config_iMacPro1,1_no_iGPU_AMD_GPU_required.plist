@@ -248,6 +248,8 @@
 				<string>onboard-1</string>
 				<key>layout-id</key>
 				<integer>28</integer>
+				<key>device-id</key>
+				<data>cKEAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
