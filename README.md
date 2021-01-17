@@ -8,7 +8,7 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.6.4**
+**Current Bootloader: OpenCore 0.6.5**
 
 ## YouTube Video to this build ## 
 
@@ -43,23 +43,6 @@ https://youtu.be/szOofRy7uBc
 # Not working so far
 - ~~[ ] **iGPU UHD630 HDMI-Output**: You cannot use the iGPU to drive your display. So far it is only working for GPU-acceleration like Intel QuickSync technology. Your help is appreciated here :).~~
 - Netflix and Prime in Safari with iMac20,x based configs.
-
-# Benchmarks
-
-OC: 5.2Ghz All-Core@1.31V, no Power Limit
-
-### Geekbench
-My Geekbench Profile: https://browser.geekbench.com/user/218488
-
-![Geekbench Score with OC](Benchmarks/Geekbench.png)
-
-### Cinebench
-
-Cinebench R20 (with OC): 6857 points.
-
-You can see my "old" Threadripper 1950x with OC to 4.0Ghz All-Core above(7916 points). The stock 1950x below (6670 points).
-
-![Cinebench R20 Score with OC](Benchmarks/CinebenchR20.png)
 
 # Details
 
