@@ -250,10 +250,11 @@ Then start Bluetooth Explorer App, select Tools/HCI Controller Selector. Then yo
 
 ## Thunderbolt 3 Support
 
-To get mac-like Thunderbolt 3 support you will need to:
-1) set the BIOS settings properly, 
-2) create your own SSDT for Thunderbolt 3 Hotplug and 
-3) need to flash your Thunderbolt 3 chip with a modified firmware. To flash your Thunderbolt 3 chip, you will need an EEPROM Flasher and another PC/Mac or something like a Rasperry Pi. 
+To get fully working Mac-like Thunderbolt 3 support, you need
+1) to set the BIOS settings properly
+1) to flash your TB3 chip
+2) SSDT-DTGP.aml and SSDT-TB3HP.aml (which you should generate on your own here: https://hackindrom.zapto.org)
+Some devices might work without it, even hotplugging. Others won't. If you have issues with your TB3 device and don't want to flash your TB3 chip, you can try to disable SSDT-DTGP.aml and SSDT-TB3HP.aml. Then hotplug doesn't work, but the device might at least work when it is connected on boot.
 
 Flashing a modified firmware will activate the Thunderbolt Bus. Without flashing the TB3-chip with a modified firmware, you might have issues with Hotplugging some TB3 devices. E.g. I couldn't get hotplug working on my TB3 eGPU case (Razer Core X). I could only get it working when it was connected while booting macOS.
 
