@@ -248,12 +248,14 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
 				<key>layout-id</key>
-				<integer>28</integer>
-				<key>device-id</key>
-				<data>cKEAAA==</data>
+				<data>CwAAAA==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,31,3</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>model</key>
+				<string>Realtek 1220-VB</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
