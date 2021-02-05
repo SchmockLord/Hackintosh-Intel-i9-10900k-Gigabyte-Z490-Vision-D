@@ -1138,13 +1138,9 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
-			<string>C020291024N0000FB</string>
-=======
 			<string>C02011701J90000CB</string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
->>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 			<key>ROM</key>
 			<data></data>
 			<key>SpoofVendor</key>
@@ -1152,15 +1148,9 @@
 			<key>SystemProductName</key>
 			<string>iMac20,2</string>
 			<key>SystemSerialNumber</key>
-<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
-			<string>C02ZMHY9JWDW</string>
-			<key>SystemUUID</key>
-			<string>5F7EBDAD-CFDB-4DD9-8A9F-3A8F175F4D58</string>
-=======
 			<string>C02CF02T046M</string>
 			<key>SystemUUID</key>
 			<string>F9E30674-E041-4492-BFB6-49DAAEA71BBD</string>
->>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1201,13 +1191,9 @@
 			<key>MinimumVolume</key>
 			<integer>20</integer>
 			<key>PlayChime</key>
-<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
-			<true/>
-=======
 			<string>Auto</string>
 			<key>SetupDelay</key>
 			<integer>0</integer>
->>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 			<key>VolumeAmplifier</key>
 			<integer>143</integer>
 		</dict>
