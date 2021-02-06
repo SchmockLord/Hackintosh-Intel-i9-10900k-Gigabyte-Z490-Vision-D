@@ -236,16 +236,21 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<key>#PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BwCbPg==</data>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+				<key>device-id</key>
+				<data>kj4AAA==</data>
+=======
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 				<key>framebuffer-con0-busid</key>
 				<data>AgAAAA==</data>
 				<key>framebuffer-con0-enable</key>
@@ -288,10 +293,26 @@
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>AwDImw==</data>
+				<key>device-id</key>
+				<data>kj4AAA==</data>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>Display Controller</string>
+				<key>model</key>
+				<string>Intel UHD 630</string>
+=======
 				<key>model</key>
 				<string>Intel UHD Graphics 630</string>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
@@ -306,6 +327,9 @@
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
 				<key>layout-id</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+				<integer>28</integer>
+=======
 				<data>CwAAAA==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,3</string>
@@ -313,6 +337,7 @@
 				<string>Audio device</string>
 				<key>model</key>
 				<string>Realtek 1220-VB</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -380,24 +405,7 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>AppleALC.kext</string>
-				<key>Comment</key>
-				<string>Audio patches</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AppleALC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
 				<string>FakePCIID.kext</string>
 				<key>Comment</key>
 				<string>Required to insert FakeIDs</string>
@@ -405,6 +413,15 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/FakePCIID</string>
+=======
+				<string>AppleALC.kext</string>
+				<key>Comment</key>
+				<string>Audio patches</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AppleALC</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -416,6 +433,7 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
 				<string>FakePCIID_Intel_I225-V.kext</string>
 				<key>Comment</key>
 				<string>Required to get 2.5GBit Ethernet working</string>
@@ -423,6 +441,15 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string></string>
+=======
+				<string>FakePCIID.kext</string>
+				<key>Comment</key>
+				<string>Required to insert FakeIDs</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/FakePCIID</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -434,9 +461,15 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
 				<string>FakePCIID_Intel_HDMI_Audio.kext</string>
 				<key>Comment</key>
 				<string>Required to get the onboard Realtek ALC1220-VB audio working</string>
+=======
+				<string>FakePCIID_Intel_I225-V.kext</string>
+				<key>Comment</key>
+				<string>Required to get 2.5GBit Ethernet working</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -459,6 +492,32 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCProcessor</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+				<string>SMCSuperIO.kext</string>
+=======
+				<string>SMCProcessor.kext</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
+				<key>Comment</key>
+				<string>VirtualSMC Plugin</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+				<string>Contents/MacOS/SMCSuperIO</string>
+=======
+				<string>Contents/MacOS/SMCProcessor</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -558,16 +617,21 @@
 		</array>
 		<key>Emulate</key>
 		<dict>
+			<key>DummyPowerManagement</key>
+			<false/>
 			<key>Cpuid1Data</key>
 			<data></data>
 			<key>Cpuid1Mask</key>
 			<data></data>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+=======
 			<key>DummyPowerManagement</key>
 			<false/>
 			<key>MaxKernel</key>
 			<string></string>
 			<key>MinKernel</key>
 			<string></string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 		</dict>
 		<key>Force</key>
 		<array>
@@ -747,6 +811,13 @@
 		</array>
 		<key>Quirks</key>
 		<dict>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+			<key>LegacyCommpage</key>
+			<false/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
+			<key>AppleCpuPmCfgLock</key>
+=======
 			<key>ForceSecureBootScheme</key>
 			<false/>
 			<key>ExtendBTFeatureFlags</key>
@@ -754,6 +825,7 @@
 			<key>LegacyCommpage</key>
 			<false/>
 			<key>DisableLinkeditJettison</key>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 			<true/>
 			<key>AppleCpuPmCfgLock</key>
 			<false/>
@@ -797,7 +869,8 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array/>
+		<array>
+		</array>
 		<key>Boot</key>
 		<dict>
 			<key>ConsoleAttributes</key>
@@ -812,8 +885,11 @@
 			<false/>
 			<key>PickerMode</key>
 			<string>External</string>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+=======
 			<key>PickerVariant</key>
 			<string>Auto</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -1062,9 +1138,13 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+			<string>C020291024N0000FB</string>
+=======
 			<string>C02011701J90000CB</string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 			<key>ROM</key>
 			<data></data>
 			<key>SpoofVendor</key>
@@ -1072,9 +1152,15 @@
 			<key>SystemProductName</key>
 			<string>iMac20,2</string>
 			<key>SystemSerialNumber</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+			<string>C02ZMHY9JWDW</string>
+			<key>SystemUUID</key>
+			<string>5F7EBDAD-CFDB-4DD9-8A9F-3A8F175F4D58</string>
+=======
 			<string>C02CF02T046M</string>
 			<key>SystemUUID</key>
 			<string>F9E30674-E041-4492-BFB6-49DAAEA71BBD</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1115,9 +1201,13 @@
 			<key>MinimumVolume</key>
 			<integer>20</integer>
 			<key>PlayChime</key>
+<<<<<<< HEAD:EFI/OC/config_iMac20,2_iGPU computing only_with 5700XT.plist
+			<true/>
+=======
 			<string>Auto</string>
 			<key>SetupDelay</key>
 			<integer>0</integer>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72:EFI/OC/config_iMac20,2_iGPU_with_display_output.plist
 			<key>VolumeAmplifier</key>
 			<integer>143</integer>
 		</dict>

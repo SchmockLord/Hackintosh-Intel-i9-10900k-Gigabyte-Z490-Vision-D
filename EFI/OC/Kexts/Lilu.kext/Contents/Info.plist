@@ -17,7 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
+<<<<<<< HEAD
+	<string>1.5.0</string>
+=======
 	<string>1.5.1</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +29,11 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
+<<<<<<< HEAD
+	<string>1.5.0</string>
+=======
 	<string>1.5.1</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>

@@ -55,7 +55,13 @@
 			<key>IOProbeScore</key>
 			<integer>1000</integer>
 			<key>IOProviderClass</key>
+<<<<<<< HEAD
+			<string>IOResources</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+=======
 			<string>IOHDACodecDevice</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 			<key>IOUserClientClass</key>
 			<string>ALCUserClient</string>
 		</dict>
@@ -152,6 +158,14 @@
 					<key>CodecID</key>
 					<integer>351359128</integer>
 					<key>Comment</key>
+<<<<<<< HEAD
+					<string>phucnguyen2411 - HP Elitedesk 800 G5 mini</string>
+					<key>ConfigData</key>
+					<data>
+					AcccIAHHHREBxx4BAccfAQH3HFEB9x0BAfce
+					HwH3H5EBlxxAAZcdEAGXHiEBlx8BAaccMAGn
+					HRABpx6LAacfAQHXHBEB1x0RAdceoQHXHwE=
+=======
 					<string>phucnguyen2411 - CX20632 HP Elitedesk 800 G5 mini</string>
 					<key>ConfigData</key>
 					<data>
@@ -159,6 +173,7 @@
 					AgHHHCABxx0RAcceAQHHHwIBpwckAaccMAGn
 					HRABpx6BAacfAgGXHEABlx0QAZceIQGXHwIB
 					9xxRAfcdAQH3Hh8B9x+Q
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -166,7 +181,11 @@
 					<integer>20</integer>
 					<key>WakeConfigData</key>
 					<data>
+<<<<<<< HEAD
+					AccMAAH3DAABlwwAAacMAAHXDAA=
+=======
 					AXcMAAGnByQBtwwAAdcMAA==
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -1718,7 +1737,11 @@
 					<integer>14</integer>
 					<key>WakeConfigData</key>
 					<data>
+<<<<<<< HEAD
+					AUcMAgIXDAI=
+=======
 					AUcMAgIXDAIBlwcl
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -4614,6 +4637,32 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>Realtek ALC 272 for Lenovo Y470 by amu_1680c</string>
+					<key>CodecID</key>
+					<integer>283902578</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6gAScfkAGHHCABhx0AAYce
+					gQGHHwEBRxwwAUcdAQFHHhABRx+QAhccQAIX
+					HRACFx4hAhcfAQFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>Sniki - Realtek ALC 272 for Lenovo B570 and B570e</string>
 					<key>CodecID</key>
 					<integer>283902578</integer>
@@ -5666,6 +5715,8 @@
 					<data>
 					AwAAAA==
 					</data>
+<<<<<<< HEAD
+=======
 					<key>Codec</key>
 					<string>jpuxdev - Realtek ALC285 for Spectre x360 13-ap0xxx</string>
 					<key>CodecID</key>
@@ -5693,6 +5744,7 @@
 					<data>
 					AwAAAA==
 					</data>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 					<key>CodecID</key>
 					<integer>283902598</integer>
 					<key>CodecName</key>
@@ -5940,6 +5992,42 @@
 					<data>
 					AwAAAA==
 					</data>
+<<<<<<< HEAD
+=======
+					<key>Codec</key>
+					<string>leeoem - Realtek ALC289 for alienware m17r2</string>
+					<key>CodecID</key>
+					<integer>283902601</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccIAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxxAAUcdAQFHHhcBRx+QAUcMAgFn
+					HPABZx0AAWceAAFnH0ABdxzwAXcdAAF3HgAB
+					dx9AAYcc8AGHHQABhx4AAYcfQAGXHHABlx0Q
+					AZceiwGXHwIBpxzwAacdAAGnHgABpx9AAbcc
+					8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHX
+					H0AB5xzwAecdAAHnHgAB5x9AAhccMAIXHRAC
+					Fx4rAhcfAgIXDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAICFwwC
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Realtek ALC289 for Acer PT515-51 By Bugprogrammer and Rover</string>
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 					<key>CodecID</key>
 					<integer>283902608</integer>
 					<key>Comment</key>
@@ -5957,6 +6045,59 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283902608</integer>
+					<key>Comment</key>
+					<string>ALC3241 - HP Envy 15t-k200 Beats Audio 2.1</string>
+					<key>ConfigData</key>
+					<data>
+					AaccEAGnHRABpx6BAacfAAEnHCABJx0AASce
+					owEnH5ABRxwwAUcdAQFHHhABRx+QAXccMQF3
+					HQEBdx4QAXcfkAFXHFABVx0QAVceIQFXHwAB
+					RwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>10</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283902608</integer>
+					<key>Comment</key>
+					<string>MacPeet - ALC290 for HP m6 n015dx</string>
+					<key>ConfigData</key>
+					<data>
+					AaccIAGnHRABpx6BAacfAAEnHDABJx0AASce
+					owEnH5ABVxxAAVcdEAFXHiEBVx8AAYccUAGH
+					HQEBhx4XAYcfkAGHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>15</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AYcMAg==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -12632,8 +12773,13 @@
 					<key>ConfigData</key>
 					<data>
 					AUccEAFHHUABRx4RAUcfAQFHDAIBtxwgAbcd
+<<<<<<< HEAD
+					EAG3HiEBtx8CAbcMAgGHHDABhx2QAYcegAGH
+					HwEBlxxAAZcdEAGXHoABlx8CAaccXwGnHTAB
+=======
 					EAG3HiEBtx8CAbcMAgGHHDABhx2QAYceoAGH
 					H5EBlxxAAZcdEAGXHoABlx8CAaccXwGnHTAB
+>>>>>>> 69dff7a455f8345f259e30429d2fefc8ff7b1f72
 					px6BAacfAQ==
 					</data>
 					<key>FuncGroup</key>
