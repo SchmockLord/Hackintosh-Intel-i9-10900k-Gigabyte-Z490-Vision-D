@@ -8,7 +8,7 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.6.5**
+**Current Bootloader: OpenCore 0.6.6**
 
 ## YouTube Video to this build ## 
 
