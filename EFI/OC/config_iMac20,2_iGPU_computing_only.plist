@@ -254,7 +254,7 @@
 				<key>acpi-wake-type</key>
 				<data>AQ==</data>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x1)/Pci(0x0, 0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1C,0x1)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>device-id</key>
 				<data>8hUAAA==</data>
@@ -1068,6 +1068,8 @@
 		</dict>
 		<key>Audio</key>
 		<dict>
+			<key>ResetTrafficClass</key>
+			<false/>
 			<key>AudioCodec</key>
 			<integer>0</integer>
 			<key>AudioDevice</key>
@@ -1100,8 +1102,6 @@
 			<false/>
 			<key>KeyForgetThreshold</key>
 			<integer>5</integer>
-			<key>KeyMergeThreshold</key>
-			<integer>2</integer>
 			<key>KeySupport</key>
 			<true/>
 			<key>KeySupportMode</key>
@@ -1124,6 +1124,8 @@
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>DirectGopRendering</key>
+			<false/>
+			<key>GopPassThrough</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
@@ -1183,6 +1185,8 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>ActivateHpetSupport</key>
+			<false/>
 			<key>DisableSecurityPolicy</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
