@@ -20,7 +20,7 @@ Some BIOS-settings are recommended for the Z490 platform in general, and some BI
 - Hyper-Threading
 - Execute Disable Bit
 - EHCI/XHCI Hand-off
-- OS type: Windows 8.1/10 UEFI Mode
+- OS type: Windows 10
 - DVMT Pre-Allocated(iGPU Memory): 64MB
 - SATA Mode: AHCI
 
