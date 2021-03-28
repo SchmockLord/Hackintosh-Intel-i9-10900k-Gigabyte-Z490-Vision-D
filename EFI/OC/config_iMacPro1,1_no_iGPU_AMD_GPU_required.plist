@@ -48,43 +48,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USB-port configuration for the Vision D</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-EC-USBX.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Enables native CPU Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB-port configuration for the Vision D Alternative 1</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-UIAC-USB-Z490-VISIOND-ALTERNATIVE-1.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB-port configuration for the Vision D Alternative 2</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-UIAC-USB-Z490-VISIOND-ALTERNATIVE-2.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB-port configuration for the Vision D Alternative 3</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-UIAC-USB-Z490-VISIOND-ALTERNATIVE-3.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -127,34 +95,7 @@
 			</dict>
 		</array>
 		<key>Patch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Rename PEGP to EGP0 (Graphics)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>UEVHUA==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>RUdQMA==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>RFNEVA==</data>
-			</dict>
-		</array>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>FadtEnableReset</key>
@@ -249,7 +190,7 @@
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>CwAAAA==</data>
+				<data>BwAAAA==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,3</string>
 				<key>device_type</key>
@@ -431,13 +372,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>USBInjectAll.kext</string>
+				<string>USBPorts_Gigabyte_Z490_VisionD.kext</string>
 				<key>Comment</key>
-				<string>Injects USB-port configuration SSDT-UIAC.aml</string>
+				<string>USB-config for the Gigabyte Z490 VisionD</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/USBInjectAll</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -701,7 +642,7 @@
 			<key>AppleCpuPmCfgLock</key>
 			<false/>
 			<key>AppleXcpmCfgLock</key>
-			<true/>
+			<false/>
 			<key>AppleXcpmExtraMsrs</key>
 			<false/>
 			<key>AppleXcpmForceBoost</key>
@@ -1011,7 +952,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02052700CDJG36A8</string>
+			<string></string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
@@ -1021,9 +962,9 @@
 			<key>SystemProductName</key>
 			<string>iMacPro1,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02DWZYPHX87</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>71885723-6C98-4D96-BD31-944E81D4D777</string>
+			<string></string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1067,6 +1008,8 @@
 			<integer>20</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
+			<key>ResetTrafficClass</key>
+			<false/>
 			<key>SetupDelay</key>
 			<integer>0</integer>
 			<key>VolumeAmplifier</key>
@@ -1087,8 +1030,6 @@
 			<false/>
 			<key>KeyForgetThreshold</key>
 			<integer>5</integer>
-			<key>KeyMergeThreshold</key>
-			<integer>2</integer>
 			<key>KeySupport</key>
 			<true/>
 			<key>KeySupportMode</key>
@@ -1104,13 +1045,15 @@
 		</dict>
 		<key>Output</key>
 		<dict>
-			<key>ForceResolution</key>
-			<false/>
 			<key>ClearScreenOnModeSwitch</key>
 			<false/>
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>DirectGopRendering</key>
+			<false/>
+			<key>ForceResolution</key>
+			<false/>
+			<key>GopPassThrough</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
@@ -1170,6 +1113,8 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>ActivateHpetSupport</key>
+			<false/>
 			<key>DisableSecurityPolicy</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>

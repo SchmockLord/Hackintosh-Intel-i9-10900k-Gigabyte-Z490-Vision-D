@@ -48,43 +48,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USB-port configuration for the Vision D</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-EC-USBX.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Enables native CPU Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB-port configuration for the Vision D Alternative 1</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-UIAC-USB-Z490-VISIOND-ALTERNATIVE-1.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB-port configuration for the Vision D Alternative 2</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-UIAC-USB-Z490-VISIOND-ALTERNATIVE-2.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB-port configuration for the Vision D Alternative 3</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-UIAC-USB-Z490-VISIOND-ALTERNATIVE-3.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -127,34 +95,7 @@
 			</dict>
 		</array>
 		<key>Patch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Rename PEGP to EGP0 (Graphics)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>UEVHUA==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>RUdQMA==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>RFNEVA==</data>
-			</dict>
-		</array>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>FadtEnableReset</key>
@@ -236,6 +177,73 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>#PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>BwCbPg==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,2,0</string>
+				<key>device-id</key>
+				<data>mz4AAA==</data>
+				<key>device_type</key>
+				<string>Display controller</string>
+				<key>framebuffer-con0-busid</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-flags</key>
+				<data>xwMAAA==</data>
+				<key>framebuffer-con0-index</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con0-type</key>
+				<data>AAQAAA==</data>
+				<key>framebuffer-con1-busid</key>
+				<data>BgAAAA==</data>
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-flags</key>
+				<data>xwMAAA==</data>
+				<key>framebuffer-con1-index</key>
+				<data>AgAAAA==</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAQAAA==</data>
+				<key>framebuffer-con2-busid</key>
+				<data>BAAAAA==</data>
+				<key>framebuffer-con2-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-flags</key>
+				<data>xwMAAA==</data>
+				<key>framebuffer-con2-index</key>
+				<data>AwAAAA==</data>
+				<key>framebuffer-con2-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
+				<key>framebuffer-con3-busid</key>
+				<data>AAAAAA==</data>
+				<key>framebuffer-con3-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con3-flags</key>
+				<data>IAAAAA==</data>
+				<key>framebuffer-con3-index</key>
+				<data>/////w==</data>
+				<key>framebuffer-con3-pipe</key>
+				<data>AAAAAA==</data>
+				<key>framebuffer-con3-type</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAgA==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>model</key>
+				<string>Intel UHD Graphics 630</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -262,7 +270,7 @@
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>CwAAAA==</data>
+				<data>BwAAAA==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,3</string>
 				<key>device_type</key>
@@ -444,13 +452,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>USBInjectAll.kext</string>
+				<string>USBPorts_Gigabyte_Z490_VisionD.kext</string>
 				<key>Comment</key>
-				<string>Injects USB-port configuration SSDT-UIAC.aml</string>
+				<string>USB-config for the Gigabyte Z490 VisionD</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/USBInjectAll</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -714,7 +722,7 @@
 			<key>AppleCpuPmCfgLock</key>
 			<false/>
 			<key>AppleXcpmCfgLock</key>
-			<true/>
+			<false/>
 			<key>AppleXcpmExtraMsrs</key>
 			<false/>
 			<key>AppleXcpmForceBoost</key>
@@ -1024,7 +1032,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02011701J90000CB</string>
+			<string></string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
@@ -1034,9 +1042,9 @@
 			<key>SystemProductName</key>
 			<string>iMac20,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02CF02T046M</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>F9E30674-E041-4492-BFB6-49DAAEA71BBD</string>
+			<string></string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1080,6 +1088,8 @@
 			<integer>20</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
+			<key>ResetTrafficClass</key>
+			<false/>
 			<key>SetupDelay</key>
 			<integer>0</integer>
 			<key>VolumeAmplifier</key>
@@ -1100,8 +1110,6 @@
 			<false/>
 			<key>KeyForgetThreshold</key>
 			<integer>5</integer>
-			<key>KeyMergeThreshold</key>
-			<integer>2</integer>
 			<key>KeySupport</key>
 			<true/>
 			<key>KeySupportMode</key>
@@ -1117,13 +1125,15 @@
 		</dict>
 		<key>Output</key>
 		<dict>
-			<key>ForceResolution</key>
-			<false/>
 			<key>ClearScreenOnModeSwitch</key>
 			<false/>
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>DirectGopRendering</key>
+			<false/>
+			<key>ForceResolution</key>
+			<false/>
+			<key>GopPassThrough</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
@@ -1183,6 +1193,8 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>ActivateHpetSupport</key>
+			<false/>
 			<key>DisableSecurityPolicy</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
