@@ -8,7 +8,7 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.6.6**
+**Current Bootloader: OpenCore 0.6.7**
 
 ## YouTube Video to this build ## 
 
@@ -23,14 +23,14 @@ https://youtu.be/szOofRy7uBc
 	- 2.5Gbit Ethernet: Intel I225-V
 	- Two USB-C/Thunderbolt 3 ports
 - RAM: 64GB G.Skill Trident Z 3600Mhz CL18
-- GPU: ~~ASRock Phantom Gaming AMD Radeon VII~~ Saphire Pulse 5700 XT
+- GPU: Formerly Radeon VII, 5700XT. Now RadeonPro W5500 (highly recommended) in an eGPU case (Razer Core) via TB3, but on my other configuration based on my AsRock Phantom Gaming TB3-ITX.  
 - Wifi/BT: MQUPIN fenvi T919 Wireless Card with BCM94360CD
 
 # Working
 - [x] **Tested with macOS Catalina 10.15.6 and macOS Big Sur**
 - [x] **Wifi and Bluetooth** (via BCM94360CD using a MQUPIN fenvi T919 Wireless Card). Replacing the onboard Intel WiFi-card doesn't work. See details below.
-- [x] **Audio**: Realtek ALC1220-VB (AppleALC.kext, layout-id=~~7~~ 28, ~~device-id=0xA170~~, FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
-- [x] **USB**, all ports except the USB 2.0 on the rear panel labeled "BIOS". Disabled this due to the 15 port limit.
+- [x] **Audio**: Realtek ALC1220-VB (AppleALC.kext, layout-id=7,FakeID.kext, FakePCIID_Intel_HDMI_Audio.kext)
+- [x] **USB**, all ports.
 - [x] **Thunderbolt 3** including Hot-plug
 - [x] **1Gbit Ethernet (Intel I219-V)**
 - [x] **2.5Gbit Ethernet (Intel I225-V)**
@@ -41,7 +41,6 @@ https://youtu.be/szOofRy7uBc
 - [x] **Restart**
 
 # Not working so far
-- ~~[ ] **iGPU UHD630 HDMI-Output**: You cannot use the iGPU to drive your display. So far it is only working for GPU-acceleration like Intel QuickSync technology. Your help is appreciated here :).~~
 - Netflix and Prime in Safari with iMac20,x based configs.
 
 # Details
