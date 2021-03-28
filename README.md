@@ -116,9 +116,9 @@ In addition, I set the following settings in Hackintool. You can edit them by cl
 
 ## USB
 
-I use USBInjectAll.kext and created my own SSDT-EC-USBX.aml and SSDT-UIAC.aml using Hackintool.
+After using USBInjectAll.kext with 3 different variations of USB-Port configurations, I switched to USBPorts.kext (created with Hackintool) and only offer one USB-port configuration from now on. All ports are enabled in this configuration.
 
-All ports are enabled, except for the USB 2.0 port that is labeled "BIOS" and intended to be used to flash the BIOS. I had to disable this to stay within the 15 port USB limit. And I don't need this port as much as the faster ones. BIOS flashing will work anyways, because this is done prior the Bootloader config.
+If you want to use the other configurations, use one of my older releases (prior to v4.5). Here is the documentation:
 
 [Alternative Port Configurations](USB-Port-Configuration.md)
 
@@ -211,7 +211,7 @@ I needed this to get Audio working:
 - AppleALC.kext
 - FakeID.kext
 - FakePCIID_Intel_HDMI_Audio.kext
-- layout-id=~~7~~ 28
+- layout-id=7
 - ~~device-id=0xA170~~
 
 The layout-id and the device-id is injected via the device properties.
@@ -223,7 +223,7 @@ The audio device has the PCI-Address PciRoot(0x0)/Pci(0x1F,0x3).
 	<key>hda-gfx</key>
 	<string>onboard-1</string>
 	<key>layout-id</key>
-	<integer>28</integer>
+	<integer>7</integer>
 	</dict>
 ```
 
