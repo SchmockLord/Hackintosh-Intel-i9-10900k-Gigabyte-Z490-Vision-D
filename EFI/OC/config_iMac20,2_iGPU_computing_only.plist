@@ -454,9 +454,9 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>USBPorts_Gigabyte_Z490_VisionD.kext</string>
+				<string>USBPorts_Gigabyte_Z490_VisionD_iMac20,2.kext</string>
 				<key>Comment</key>
-				<string>USB-config for the Gigabyte Z490 VisionD</string>
+				<string>USB-config for the Gigabyte Z490 VisionD with SMBIOS iMac20,2</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
