@@ -8,6 +8,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>USB Port Map for Gigabyte Z490 VIsion D (Alternative 3, exceeding 16 Port Limit)</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-UIAC-USB-Z490-VISIOND.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Required for Thunderbolt 3 Hot Plug support</string>
 				<key>Enabled</key>
 				<true/>
@@ -308,6 +316,24 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+				<string>USBInjectAll.kext</string>
+				<key>Comment</key>
+				<string>Injects USB Port config SSDT-UIAC-USB-Z490-VISIOND.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/USBInjectAll</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
 				<string>FakePCIID.kext</string>
 				<key>Comment</key>
 				<string>Required to insert FakeIDs</string>
@@ -387,24 +413,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCSuperIO</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>USBPorts_Gigabyte_Z490_VisionD_iMac20,2.kext</string>
-				<key>Comment</key>
-				<string>USB-config for the Gigabyte Z490 VisionD with SMBIOS iMac20,2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -509,7 +517,7 @@
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Scheme</key>
 		<dict>
