@@ -10,21 +10,11 @@ The current default port configuration works perfectly fine and so most people c
 
 However, the details are intesting and the following sections detail alternative Port Configurations and how to create your own if you are working with a different motherboard or are so inclined to make changes. 
 
-### Proper USB-port configuration ###
+### My USB-port configuration ###
 
-I have created 3 alternative USB-port configurations for the Gigabyte Z490 Vision D. . Just set the ```SSDT-UIAC-xxx.aml``` to enabled for the one you want to use. 
+![USB-Port Configuration](Docs/USB-port-Configuration-Release-v5.3.png)
 
-#### Alternative 1 ####
-
-![USB-Port Configuration Alternative 1](Docs/USB-port-Configuration-Alternative-1.png)
-
-#### Alternative 2 ####
-
-![USB-Port Configuration Alternative 2](Docs/USB-port-Configuration-Alternative-2.png)
-
-#### Alternative 3 ####
-
-![USB-Port Configuration Alternative 3](Docs/USB-port-Configuration-Alternative-3.png)
+### HowTo create your own USB-port configuration ###
 
 If you want to use this EFI-folder for a different Z490 Board, you should create your own ```SSDT-UIAC.aml``` with Hackintool.
 
