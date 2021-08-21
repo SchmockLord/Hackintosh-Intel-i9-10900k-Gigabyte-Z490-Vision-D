@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19F101</string>
+	<string>20G71</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.5.1d1</string>
+	<string>2.5.3d3</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,21 +25,23 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.5.1d1</string>
+	<string>2.5.3d3</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>11E608c</string>
+	<string>12E507</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>11.3</string>
 	<key>DTSDKBuild</key>
-	<string>19E258</string>
+	<string>20E214</string>
 	<key>DTSDKName</key>
-	<string>macosx10.15</string>
+	<string>macosx11.3</string>
 	<key>DTXcode</key>
-	<string>1150</string>
+	<string>1251</string>
 	<key>DTXcodeBuild</key>
-	<string>11E608c</string>
+	<string>12E507</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>IntelMausi</key>
@@ -50,9 +52,9 @@
 			<dict>
 				<key>enableCSO6</key>
 				<true/>
-				<key>enableTSO4</key>
+				<key>enableWakeOnAddrMatch</key>
 				<false/>
-				<key>enableTSO6</key>
+				<key>enableWakeS5</key>
 				<false/>
 				<key>maxIntrRate10</key>
 				<integer>3000</integer>
@@ -74,7 +76,7 @@
 				<integer>0</integer>
 			</dict>
 			<key>Driver_Version</key>
-			<string>2.5.1d0</string>
+			<string>2.5.3d3</string>
 			<key>IOClass</key>
 			<string>IntelMausi</string>
 			<key>IOPCIMatch</key>
