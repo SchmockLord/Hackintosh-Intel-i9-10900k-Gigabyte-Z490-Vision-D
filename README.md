@@ -284,9 +284,9 @@ I have also used the following combo. Works as good as the first one:
 
 ### BIOS settings for Thunderbolt 3:
 
-![Thunderbolt 3 BIOS settings 1](BIOS-settings/IMG_0120.jpg)
+![Thunderbolt 3 BIOS settings 1](BIOS-settings/IMG_2709.jpg)
 
-![Thunderbolt 3 BIOS settings 2](BIOS-settings/IMG_0121.jpg)
+![Thunderbolt 3 BIOS settings 2](BIOS-settings/IMG_2710.jpg)
 
 ## Language
 
