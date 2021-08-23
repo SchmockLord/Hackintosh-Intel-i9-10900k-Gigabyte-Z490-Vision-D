@@ -29,14 +29,12 @@ Some BIOS-settings are recommended for the Z490 platform in general, and some BI
 - Security: No security
 
 ## iMac20,2-specific settings:
-- Primary Graphics Adapter: PCIE (when you plugin the monitor in the graphics card) or iGPU (when you plugin the monitor to your onboard HDMI)
-- Share Memory: 64MB
-- IGPU Multi-Monitor: Enabled (this keeps the iGPU enabled even when a graphics card is detected)
+- Internal Graphics: Enabled
+- DVMT Pre-Allocated: 64MB or 128MB (for QHD+/UHD)
+- DVMT Total Gfx Mem: 256M
 
 ## iMacPro1,1-specific settings:
-- Primary Graphics Adapter: PCIE (with iMacPro1,1 config, the iGPU is disabled)
-- Share Memory: 64MB
-- IGPU Multi-Monitor: Disabled (iGPU is disabeld when a graphics card is detected)
+- Internal Graphics: Disabled
 
 ## My BIOS settings for BIOS f20b with iMac20,2:
 
