@@ -115,11 +115,7 @@ In addition, I set the following settings in Hackintool. You can edit them by cl
 
 ## USB
 
-After using USBInjectAll.kext with 3 different variations of USB-Port configurations, I switched to USBPorts.kext (created with Hackintool) and only offer one USB-port configuration from now on. All ports are enabled in this configuration.
-
-If you want to use the other configurations, use one of my older releases (prior to v4.5). Here is the documentation:
-
-[Alternative Port Configurations](USB-Port-Configuration.md)
+[USB Port Configuration](USB-Port-Configuration.md)
 
 ## iGPU UHD630
 
