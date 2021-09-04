@@ -1,4 +1,4 @@
-# Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D
+# Hackintosh Guide for GIGABYTE Z490 Vision D Motherboard
 
 **This guide it's updated to OpenCore 0.7.2 and tested on my main device.**
 <!-- shields -->
