@@ -1,18 +1,18 @@
-# Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D
+# Hackintosh Guide for GIGABYTE Z490 Vision D Motherboard
 
 **This guide it's updated to OpenCore 0.7.2 and tested on my main device.**
 <!-- shields -->
 <div>
     <!-- downloads -->
-    <a href="https://github.com/RobyRew/GIGABYTE-Z490-Vision-D_i9-10900K_Hackintosh/releases">
-        <img src="https://img.shields.io/github/downloads/RobyRew/GIGABYTE-Z490-Vision-D_i9-10900K_Hackintosh/total" alt="downloads"/>
+    <a href="https://github.com/RobyRew/GIGABYTE-Z490-Vision-D_Hackintosh/releases">
+        <img src="https://img.shields.io/github/downloads/RobyRew/GIGABYTE-Z490-Vision-D_Hackintosh/total" alt="downloads"/>
     </a>
     <!-- version -->
-    <a href="https://github.com/RobyRew/GIGABYTE-Z490-Vision-D_i9-10900K_Hackintosh/releases/latest">
-        <img src="https://img.shields.io/github/release/RobyRew/GIGABYTE-Z490-Vision-D_i9-10900K_Hackintosh.svg" alt="latest version"/>
+    <a href="https://github.com/RobyRew/GIGABYTE-Z490-Vision-D_Hackintosh/releases/latest">
+        <img src="https://img.shields.io/github/release/RobyRew/GIGABYTE-Z490-Vision-D_Hackintosh.svg" alt="latest version"/>
     </a>
     <!-- platform -->
-    <a href="https://github.com/RobyRew/GIGABYTE-Z490-Vision-D_i9-10900K_Hackintosh">
+    <a href="https://github.com/RobyRew/GIGABYTE-Z490-Vision-D_Hackintosh">
         <img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="platform"/>
     </a>
 </div>
