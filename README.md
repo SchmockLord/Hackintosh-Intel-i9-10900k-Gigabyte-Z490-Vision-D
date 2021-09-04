@@ -24,39 +24,34 @@
 ## Specs:
 | Component | Name |
 |:--- |:---:|
-| Motherboard:  | FX504GE **HM370** |
-| CPU: | Intel i9 10900K |
-| RAM: | 16GB **SK Hyinix** HMA82GS6CJR8N-VK 2666Mhz |
-| iGPU: | Intel UHD 630 (Mobile) |
-| dGPU: | NVIDIA GeForce GTX 1050 Ti (DISABLED) |
-| NVMe: | Samsung 970 EVO Plus |
-| HDD: | HGST HTS721010A9E630 |
-| Wifi/BT: | Intel(R) Wireless-AC 9560 160MHz (Type CNVi) |
-| Audio: | RealTek ALC255 |
-| Ethernet: | Realtek RTL8111 |
-| Trackpad: | ELAN1200 Precision TouchPad (Type HID) |
-| Keyboard: | Standard PS/2 Keyboard |
+| Motherboard:  | **Gigabyte** Vision D Z490 |
+| CPU: | **Intel** i9 10900K |
+| RAM: | **Kingston** KHX3733C19D4/8GX 3777Mhz 2x8GB CL16 |
+| iGPU: | **Intel** UHD 630 |
+| Display: | **LG** 38GN950 (3840x1600@75Hz) |
+| NVMe 1: | **Samsung** 970 EVO Plus |
+| NVMe 2: | **Hitachi** HFM128GDJTNG-8310A |
+| Wifi/BT: | **Intel** Wi-Fi 6 AX201) |
+| Audio: | **Realtek** ALC1220-VB |
+| Ethernet 1: | **Intel** 2.5GbE |
+| Ethernet 2: | **Intel** 1GbE |
 
-![Asus FX504GE Layout](/Docs/Images/Guide/NZXT_PC-macOS-layout.png)
-These are all the external ports of the laptop. (**They all work**)
+![NZXT_PC-macOS-layout](/Docs/Images/Guide/NZXT_PC-macOS-layout.png)
+These are all the external ports of this PC.
 
 ### Working
-- [x] **Tested with macOS High Sierra, Mojave, Catalina, Big Sur, and Monterrey**
-- [x] **Wifi** (Thanks to [AirportItlwm.kext](https://github.com/OpenIntelWireless/itlwm/releases) and loading from system the kext: `IO80211Family.kext`)
-- [x] **Bluetooth:** (Thanks to [IntelBluetoothFirmware.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases))
-- [x] **Audio:** Realtek ALC255 (Thanks to AppleALC.kext with layout-id=3 setted in Device Properties)
-- [x] **USB:** All internal and external ports (Thanks to SSDT-EC-USBX-LAPTOP.aml)
-- [x] **Ethernet:** Realtek RTL8111 (Thanks to RealtekRTL8111.kext)
-- [x] **Trackpad:** (Working thanks to VoodooI2C.kext, VoodooI2CHID.kext and SSDT-XOSI.aml)
-- [x] **HDMI:** Works almost perfect. 
+- [x] **Tested with Big Sur and Monterrey**
+- [x] **Wifi**
+- [x] **Bluetooth:**
+- [x] **Audio:** Realtek ALC1220-VB (Thanks to AppleALC.kext with layout-id=1 setted in Device Properties)
+- [x] **USB:** All internal and external ports (Thanks to USB-map.kext)
+- [x] **Ethernet:** Both Working
+- [x] **HDMI:** Yes, but no multimonitor. 
 - [x] **Shutdown:** Yes
 - [x] **Restart:** Yes
-- [x] **Sleep/Wake:** Yes
 
 ### Not working
-- dGPU (Any support in Mojave and up).
-- Continuity Features (not working for now, waiting on https://openintelwireless.github.io/).
-
+- **Sleep/Wake:** Not, for now...
 
 ```bash
 ```
