@@ -91,11 +91,11 @@ These are all the external ports of this PC.
 
 # BIOS Settings:
 - Make Sure you have [Latest BIOS vF20](https://download.gigabyte.com/FileList/BIOS/mb_bios_z490-vision-d_f20.zip)
-- After Updating the BIOS, stock configuration works, so don't worry about this part.
+- After Updating the BIOS,...(IN PROCESS)
 
 ---
 
-# OpenCore Configuration
+# OpenCore Configuration (IN PROCESS)
 
 ## [Here it's my config.plist and the explanation:](/Docs/config.plist.md)
 #### [ACPI](/Docs/config.plist.md#acpi)
@@ -109,7 +109,7 @@ These are all the external ports of this PC.
 
 ---
 
-# Post Install (Important!!)
+# Post Install (IN PROCESS)
 Open Terminal.app and run those commands:
 ```bash
 sudo rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist
@@ -117,7 +117,7 @@ sudo rm /Library/Preferences/SystemConfiguration/preferences.plist
 ```
 ---
 
-# BenchMarks:
+# BenchMarks:(IN PROCESS)
 #### Cinebench R23:
 ![Cinebench R23](/Docs/Images/Benchmarks/Cinebench_R23.png)
 
