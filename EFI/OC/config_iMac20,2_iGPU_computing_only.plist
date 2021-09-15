@@ -8,14 +8,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>USB Port Map for Gigabyte Z490 VIsion D (Alternative 3, exceeding 16 Port Limit)</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-UIAC-USB-Z490-VISIOND.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Required for Thunderbolt 3 Hot Plug support</string>
 				<key>Enabled</key>
 				<true/>
@@ -292,13 +284,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>USBInjectAll.kext</string>
+				<string>USBMap_iMac20,2.kext</string>
 				<key>Comment</key>
-				<string>Injects USB Port config SSDT-UIAC-USB-Z490-VISIOND.aml</string>
+				<string>Injects USB Port config if you use iMac20,2</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/USBInjectAll</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -640,6 +632,7 @@
 			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
+				<string>csr-active-config</string>
 				<string>boot-args</string>
 			</array>
 		</dict>
