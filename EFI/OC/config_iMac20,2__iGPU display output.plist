@@ -8,14 +8,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Required for Thunderbolt 3 Hot Plug support</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-DTGP.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Improves SMBus Support</string>
 				<key>Enabled</key>
 				<true/>
@@ -308,7 +300,7 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>USBMap_iMac20,2.kext</string>
+				<string>USBMap_iMac.kext</string>
 				<key>Comment</key>
 				<string>Injects USB Port config if you use iMac20,2</string>
 				<key>Enabled</key>
@@ -513,6 +505,8 @@
 		</dict>
 		<key>Scheme</key>
 		<dict>
+			<key>CustomKernel</key>
+			<false/>
 			<key>FuzzyMatch</key>
 			<false/>
 			<key>KernelArch</key>
