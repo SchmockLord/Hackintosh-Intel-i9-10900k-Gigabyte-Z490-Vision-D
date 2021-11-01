@@ -8,8 +8,6 @@ I have successfully installed MacOS Catalina 10.15.4 on my i9-10900k running on 
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.6.7**
-
 ## YouTube Video to this build ## 
 
 I also made a video on how I got macOS running on my build and how I build this rig:
@@ -94,6 +92,12 @@ Once you have installed MacOS Catalina onto your hackintosh's drive you should r
 Now your hackintosh can boot without the USB install stick.
 
 Then following the other sections below you might want to investigate a GUI boot menu, a boot chime, and other post install niceties. (See [dortania post install cosmetics](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#opencore-beauty-treatment))
+
+# Using macOS and Windows with OC
+
+You should change two settings in config.plist:
+- **UpdateSMBIOSMode** to **Custom** 
+- **CustomSMBIOSGuid** to **1**
 
 ## Fixing Sleep/Wake 
 
