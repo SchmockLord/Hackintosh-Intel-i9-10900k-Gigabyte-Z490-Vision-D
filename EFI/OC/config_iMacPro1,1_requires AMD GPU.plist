@@ -10,7 +10,7 @@
                     <key>Comment</key>
                     <string>Thunderbolt</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-DTPG.aml</string>
                 </dict>
@@ -58,7 +58,7 @@
                     <key>Comment</key>
                     <string>Enables Thunderbolt 3 Hot Plug</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-TB3HP.aml</string>
                 </dict>
