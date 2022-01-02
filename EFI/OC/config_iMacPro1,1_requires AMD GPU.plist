@@ -171,10 +171,10 @@
                     <key>acpi-wake-type</key>
                     <data>AQ==</data>
                 </dict>
-                <key>PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)</key>
+                <key>PciRoot(0x0)/Pci(0x1C,0x1)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>AAPL,slot-name</key>
-                    <string>Internal@0,27,2/0,0</string>
+                    <string>Internal@0,28,1/0,0</string>
                     <key>device-id</key>
                     <data>8xWGgA==</data>
                     <key>device_type</key>
@@ -603,7 +603,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>agdpmod=pikera shikigva=80 -lilubetaall keepsyms=1</string>
+                    <string>agdpmod=pikera shikigva=80 -lilubetaall keepsyms=1 dk.e1000=0</string>
                     <key>csr-active-config</key>
                     <data>5wMAAA==</data>
                     <key>prev-lang:kbd</key>
