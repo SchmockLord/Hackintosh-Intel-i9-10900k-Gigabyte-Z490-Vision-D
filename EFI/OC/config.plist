@@ -523,7 +523,7 @@
 			<key>CustomPciSerialDevice</key>
 			<false/>
 			<key>CustomSMBIOSGuid</key>
-			<false/>
+			<true/>
 			<key>DisableIoMapper</key>
 			<true/>
 			<key>DisableLinkeditJettison</key>
@@ -753,7 +753,7 @@
 			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
-			<string>Please fill here</string>
+			<string>C02051200GU00008C</string>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
@@ -767,9 +767,9 @@
 			<key>SystemProductName</key>
 			<string>iMac20,2</string>
 			<key>SystemSerialNumber</key>
-			<string>Please fill here</string>
+			<string>C02DVBZD046M</string>
 			<key>SystemUUID</key>
-			<string>Please fill here</string>
+			<string>5AD9B11B-C89E-4800-A6E7-2BC84976289B</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -778,7 +778,7 @@
 		<key>UpdateSMBIOS</key>
 		<true/>
 		<key>UpdateSMBIOSMode</key>
-		<string>Create</string>
+		<string>Custom</string>
 		<key>UseRawUuidEncoding</key>
 		<false/>
 	</dict>
