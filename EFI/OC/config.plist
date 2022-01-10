@@ -181,6 +181,19 @@
 				<key>model</key>
 				<string>Realtek 1220-VB</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>PCIe</string>
+				<key>device_type</key>
+				<string>Network controller</string>
+				<key>vendor-id</key>
+				<data>5BQ=</data>
+				<key>device-id</key>
+				<data>sUM=</data>
+				<key>model</key>
+				<string>BCM4352 802.11ac Wireless Network Adapter</string>
+			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict/>
@@ -286,6 +299,24 @@
 				<string>FakePCIID_Intel_HDMI_Audio.kext</string>
 				<key>Comment</key>
 				<string>V1.3.15 | Required to get the onboard Realtek ALC1220-VB audio working</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>FakePCIID_Broadcom_WiFi.kext</string>
+				<key>Comment</key>
+				<string>For BCM4352</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -602,7 +633,7 @@
 			<key>DisableRtcChecksum</key>
 			<false/>
 			<key>ExtendBTFeatureFlags</key>
-			<false/>
+			<true/>
 			<key>ExternalDiskIcons</key>
 			<false/>
 			<key>ForceAquantiaEthernet</key>
@@ -1069,7 +1100,7 @@
 			<key>DisableSecurityPolicy</key>
 			<false/>
 			<key>EnableVectorAcceleration</key>
-			<false/>
+			<true/>
 			<key>EnableVmx</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>

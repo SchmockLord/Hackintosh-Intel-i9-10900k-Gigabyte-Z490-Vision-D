@@ -19,4 +19,3 @@ Currently running Monterey 12.5.1.
 | Windows SSD 2 | Samsung 960 EVO 2 TB |
 | WiFi | ASUS PCE-AC56 | 
 | Bluetooth | ASUS USB-BT400 |
-| PSU | be quiet! Straight Power 11 750W |
