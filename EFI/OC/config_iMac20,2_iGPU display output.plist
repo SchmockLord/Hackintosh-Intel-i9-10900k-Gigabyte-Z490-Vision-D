@@ -8,6 +8,14 @@
             <array>
                 <dict>
                     <key>Comment</key>
+                    <string>USB Port Mapping Z490 Vision D (no kext needed)</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-USB-Ports-Z490-VisionD.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
                     <string>Enables Thunderbolt 3 Hot Plug</string>
                     <key>Enabled</key>
                     <true/>
@@ -67,29 +75,15 @@
             <array>
                 <dict>
                     <key>All</key>
-                    <false/>
+                    <true/>
                     <key>Comment</key>
-                    <string>Delete CpuPm</string>
+                    <string>Delete xh_rksu4</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>OemTableId</key>
-                    <data>Q3B1UG0AAAA=</data>
+                    <data>eGhfY21zZDQ=</data>
                     <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>U1NEVA==</data>
-                </dict>
-                <dict>
-                    <key>All</key>
-                    <false/>
-                    <key>Comment</key>
-                    <string>Delete Cpu0Ist</string>
-                    <key>Enabled</key>
-                    <false/>
-                    <key>OemTableId</key>
-                    <data>Q3B1MElzdAA=</data>
-                    <key>TableLength</key>
-                    <integer>0</integer>
+                    <integer>13837</integer>
                     <key>TableSignature</key>
                     <data>U1NEVA==</data>
                 </dict>
@@ -244,7 +238,7 @@
                     <key>BundlePath</key>
                     <string>Lilu.kext</string>
                     <key>Comment</key>
-                    <string>V1.5.9 | Patch engine</string>
+                    <string>V1.6.0 | Patch engine</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -280,7 +274,7 @@
                     <key>BundlePath</key>
                     <string>WhateverGreen.kext</string>
                     <key>Comment</key>
-                    <string>V1.5.6</string>
+                    <string>V1.5.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -298,29 +292,11 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.8 | Audio patches</string>
+                    <string>V1.6.9 | Audio patches</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AppleALC</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>BundlePath</key>
-                    <string>USBMap_iMac202.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0 | Injects USB Port config if you use iMac20,2</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -491,7 +467,7 @@
                 <key>DisableLinkeditJettison</key>
                 <true/>
                 <key>DisableRtcChecksum</key>
-                <true/>
+                <false/>
                 <key>ExtendBTFeatureFlags</key>
                 <false/>
                 <key>ExternalDiskIcons</key>
