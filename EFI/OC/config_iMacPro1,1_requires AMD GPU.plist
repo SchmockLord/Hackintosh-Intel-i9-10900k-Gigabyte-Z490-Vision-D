@@ -170,7 +170,7 @@
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,28,1/0,0</string>
 				<key>device-id</key>
-				<data>8hUAAA==</data>
+				<data>8xWGgA==</data>
 				<key>device_type</key>
 				<string>Ethernet controller</string>
 				<key>model</key>
@@ -448,7 +448,28 @@
 		<key>Force</key>
 		<array/>
 		<key>Patch</key>
-		<array/>
+		<array>
+			<dict>
+				<key>Base</key>
+				<string>__Z18e1000_set_mac_typeP8e1000_hw</string>
+				<key>Coment</key>
+				<string>I225-V patch</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>8hUAAA==</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleIntelI210Ethernet</string>
+				<key>MinKernel</key>
+				<string>19.0.0</string>
+				<key>MaxKernel</key>
+				<string>20.4.0</string>
+				<key>Replace</key>
+				<data>8xUAAA==</data>
+			</dict>
+		</array>
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
