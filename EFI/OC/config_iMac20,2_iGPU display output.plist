@@ -276,7 +276,7 @@
 				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
-				<string>V1.5.8</string>
+				<string>V1.5.9</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -294,7 +294,7 @@
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
-				<string>V1.7.1 | Audio patches</string>
+				<string>V1.7.2 | Audio patches</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -468,6 +468,42 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>SMCRadeonGPU.kext</string>
+				<key>Comment</key>
+				<string>V0.3.1</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SMCRadeonGPU</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>RadeonSensor.kext</string>
+				<key>Comment</key>
+				<string>V0.3.1</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RadeonSensor</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array/>
@@ -489,10 +525,12 @@
 		<key>Patch</key>
 		<array>
 			<dict>
+				<key>Arch</key>
+				<string>Any</string>
 				<key>Base</key>
 				<string>__Z18e1000_set_mac_typeP8e1000_hw</string>
-				<key>Coment</key>
-				<string>I225-V patch</string>
+				<key>Comment</key>
+				<string></string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -501,12 +539,20 @@
 				<data>8hUAAA==</data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleIntelI210Ethernet</string>
-				<key>MinKernel</key>
-				<string>19.0.0</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
 				<key>MaxKernel</key>
 				<string>20.4.0</string>
+				<key>MinKernel</key>
+				<string>19.0.0</string>
 				<key>Replace</key>
 				<data>8xUAAA==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -519,8 +565,6 @@
 			<false/>
 			<key>AppleXcpmForceBoost</key>
 			<false/>
-			<key>CustomPciSerialDevice</key>
-			<false/>
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
@@ -532,8 +576,6 @@
 			<key>ExtendBTFeatureFlags</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
-			<false/>
-			<key>ForceAquantiaEthernet</key>
 			<false/>
 			<key>ForceSecureBootScheme</key>
 			<false/>
@@ -577,7 +619,7 @@
 			<key>ConsoleAttributes</key>
 			<integer>0</integer>
 			<key>HibernateMode</key>
-			<string>None</string>
+			<string>Auto</string>
 			<key>HideAuxiliary</key>
 			<false/>
 			<key>LauncherOption</key>
@@ -624,12 +666,8 @@
 		<array/>
 		<key>Security</key>
 		<dict>
-			<key>AllowNvramReset</key>
-			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
-			<key>AllowToggleSip</key>
-			<false/>
 			<key>ApECID</key>
 			<integer>0</integer>
 			<key>AuthRestart</key>
@@ -654,13 +692,6 @@
 			<string>Disabled</string>
 			<key>Vault</key>
 			<string>Optional</string>
-		</dict>
-		<key>Serial</key>
-		<dict>
-			<key>Init</key>
-			<false/>
-			<key>Override</key>
-			<false/>
 		</dict>
 		<key>Tools</key>
 		<array/>
@@ -800,9 +831,9 @@
 			<key>JumpstartHotPlug</key>
 			<false/>
 			<key>MinDate</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>MinVersion</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 		</dict>
 		<key>AppleInput</key>
 		<dict>
@@ -856,6 +887,16 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ResetNvramEntry.efi</string>
+			</dict>
 			<dict>
 				<key>Arguments</key>
 				<string></string>
