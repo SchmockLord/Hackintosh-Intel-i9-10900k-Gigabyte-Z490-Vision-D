@@ -424,7 +424,7 @@
 				<key>BundlePath</key>
 				<string>AirportBrcmFixup.kext</string>
 				<key>Comment</key>
-				<string>2.1.3</string>
+				<string>2.1.5</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
