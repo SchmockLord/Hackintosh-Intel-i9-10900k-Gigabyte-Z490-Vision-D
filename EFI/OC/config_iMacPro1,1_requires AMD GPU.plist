@@ -380,7 +380,7 @@
 				<key>Comment</key>
 				<string>V1.0 | USB-Port mapping for Gigabyte Z490 Vision D for iMac20,2.  Alternatively Disable this kext and enable SSDT-USB-Ports-Z490-VisionD.aml and the ACPI-Delete of the SSDT-7-xh_cmsd4.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
@@ -398,7 +398,7 @@
 				<key>Comment</key>
 				<string>V1.0 | USB-Port mapping for Gigabyte Z490 Vision D for iMacPro1,1.  Alternatively Disable this kext and enable SSDT-USB-Ports-Z490-VisionD.aml and the ACPI-Delete of the SSDT-7-xh_cmsd4.aml</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
