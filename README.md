@@ -305,30 +305,7 @@ Valid Keyboard Values see here: [AppleKeyboardLayouts.txt](https://github.com/ac
 
 # Overclocking Experiences:
 
-My Overclock settings now are:
-- Per Core overclocking:
-	53 when 2 cores are utilized
-	52 when 6 cores are utilized
-	51 with more than 6 cores are utilized
-- voltage offset: -50mV
-- Loadline Calibration: Level 3
-- Short Term Power Limit: 250W
-- Long Term Power Limit: 250W
-
-
-~~The highest Voltage I feel comfortable with for 24/7 is 1.35V.~~
-
-~~I unlocked the Power Limit and tried 5.2 and 5.3 Ghz All-Core.~~
-
-~~5.3 Ghz crashed in Benchmarks. 5.2Ghz worked. So far everything is working and no further crashing with 5.2Ghz.~~
-
-~~5.2 Ghz All-Core is working with 1.31V and is stable so far.~~
-
-~~Temps on idle: 35°C.~~
-
-~~Temps while running Cinebench e.g. : 75-80°C.~~
-
-~~Cooling solution: I have Thermalgrizzly Conductonaut applied, so fluid metal. And I have a custom watercooling loop with 2x 360mm and 1x 480mm radiator. Fans are spinning on minimum RPM until the temps reach 60°C. They reach 100% at 80°C.~~
+Don't use Overclocking and XMP with macOS. Longterm I only experienced instability even with only XMP enabled and even if it was running with XMP fine in Windows. I just had a client where try to get macOS running for 3h. In the end it was a Kernel panic caused by XMP. Just saying.
 
 # Credits
 Thanks for your support :) Your help was crucial for my build.
