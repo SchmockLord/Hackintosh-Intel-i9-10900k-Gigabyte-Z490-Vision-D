@@ -103,8 +103,6 @@ You should change two settings in config.plist:
 
 In this section I want to show you how I setup my system so it sleeps and wakes just fine, but I don't tell you that you need exactly these settings to have a proper configuration.
 
-I also had to use ```SSDT-Disable-CNVW.aml``` to disable the CNVi feature of the m.2 slot, where the onboard Intel Wifi 6 sits, because the CNVi device was constantly waking up my PC.
-
 In addition, I set the following settings in Hackintool. You can edit them by clicking on the value, but it has a very small "clickable" area:
 
 ![Hackintool Power Settings](Docs/Hackintool-power-settings.png)
