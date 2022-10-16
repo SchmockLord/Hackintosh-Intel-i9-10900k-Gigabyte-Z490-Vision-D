@@ -8,14 +8,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Fixes the Intel I225-V Ethernet for macOS Ventura</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-I225V.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>USB Port Mapping Z490 Vision D (no kext needed)</string>
 				<key>Enabled</key>
 				<false/>
@@ -61,14 +53,6 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-AWAC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disables the CNVi Slot where the onboard m.2 Intel Wifi 6 card sits</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-Disable-CNVW.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -651,7 +635,7 @@
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
-			<string>j137</string>
+			<string>j185f</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -686,7 +670,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>agdpmod=pikera shikigva=80 e1000=0 keepsyms=1 -v</string>
+				<string>agdpmod=pikera shikigva=80 e1000=0 dk.e1000=0 keepsyms=1 -v</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -756,7 +740,7 @@
 			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
-			<string></string>
+			<string>Please fill here</string>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
@@ -770,9 +754,9 @@
 			<key>SystemProductName</key>
 			<string>iMacPro1,1</string>
 			<key>SystemSerialNumber</key>
-			<string></string>
+			<string>Please fill here</string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>Please fill here</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>

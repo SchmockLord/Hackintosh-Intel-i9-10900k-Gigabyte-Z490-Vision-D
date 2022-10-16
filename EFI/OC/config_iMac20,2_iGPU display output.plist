@@ -8,14 +8,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Fixes the Intel I225-V Ethernet for macOS Ventura</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-I225V.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>USB Port Mapping Z490 Vision D (no kext needed)</string>
 				<key>Enabled</key>
 				<false/>
@@ -61,14 +53,6 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-AWAC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disables the CNVi Slot where the onboard m.2 Intel Wifi 6 card sits</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-Disable-CNVW.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -168,22 +152,6 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>acpi-wake-type</key>
-				<data>AQ==</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,3</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>layout-id</key>
-				<data>BwAAAA==</data>
-				<key>model</key>
-				<string>Realtek 1220-VB</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -228,6 +196,22 @@
 				<string>onboard-1</string>
 				<key>model</key>
 				<string>Intel UHD Graphics 630</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>acpi-wake-type</key>
+				<data>AQ==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,31,3</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>layout-id</key>
+				<data>BwAAAA==</data>
+				<key>model</key>
+				<string>Realtek 1220-VB</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -731,7 +715,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>agdpmod=pikera shikigva=80 e1000=0 keepsyms=1 -v</string>
+				<string>agdpmod=pikera shikigva=80 e1000=0 dk.e1000=0 keepsyms=1 -v</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -801,7 +785,7 @@
 			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
-			<string></string>
+			<string>Please fill here</string>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
@@ -815,9 +799,9 @@
 			<key>SystemProductName</key>
 			<string>iMac20,2</string>
 			<key>SystemSerialNumber</key>
-			<string></string>
+			<string>Please fill here</string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>Please fill here</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
