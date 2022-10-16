@@ -117,9 +117,23 @@ In addition, I set the following settings in Hackintool. You can edit them by cl
 
 ## USB
 
-I don't use the Kext-based USB-configuration anymore. Instead, we use the USB-Port configuration via SSDT (SSDT-USB-Ports-Z490-VisionD.aml). 
+Personally I don't use the Kext-based USB-configuration anymore. Instead, I use the USB-Port configuration via SSDT (SSDT-USB-Ports-Z490-VisionD.aml).
 
-The benefit of this is, that we don't need specific kexts for each SMBIOS (iMac20,2; iMacPro1,1 etc.) and it is the cleanest way of doing the USB-Port Mapping.
+The benefit of the SSDT-based configuration is, that we don't need specific kexts for each SMBIOS (iMac20,2; iMacPro1,1 etc.) and it is the cleanest way of doing the USB-Port Mapping.
+
+But because many of you have different BIOS versions, I set the kext-based USB configuration (USBMap_iMac202.kext and USBMap_iMacPro11.kext) as Default and disabled the SSDT-USB-Ports-Z490-VisionD.aml and the ACPI-Delete of the original USB-config.
+
+Try what works best for yourself:
+
+Either the Kext-based USB-config: 
+
+Disable the USBMap_iMac202.kext and USBMap_iMacPro11.kext and enable SSDT-USB-Ports-Z490-VisionD.aml and the ACPI-Delete of the original USB-config:
+![ACPI Delete of the original USB config](Docs/ACPI-Delete.png)
+
+OR
+
+the SSDT-based USB-config: Enable one of the the USBMap_iMac202.kext and USBMap_iMacPro11.kext (depends on what SMBIOS you use) and disable the SSDT-USB-Ports-Z490-VisionD.aml and the ACPI-Delete of the original USB-config.
+
 
 ### My USB-port configuration ###
 
