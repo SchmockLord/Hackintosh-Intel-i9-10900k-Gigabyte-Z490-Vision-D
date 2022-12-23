@@ -158,7 +158,7 @@
 				<data>AwDImw==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
-				<key>device-id</key>
+				<key>#device-id</key>
 				<data>kj4AAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
