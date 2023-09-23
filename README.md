@@ -1,3 +1,35 @@
+# Wifi in macOS Sonoma
+
+With macOS Sonoma, the Broadcom based Wifi cards don't work plug and play anymore. It is actually a very annoying process now, that you have to repeat after every macOS Update!
+
+First, I recommend you to install Sonoma using the Full Installer. So create a Installer USB Stick and run the Sonoma Installer from there.
+
+With macOS Sonoma, the following is required to get the Broadcom based Wifi cards to work, also our beloved Fenvi T919:
+- Additional Kexts: ```IO80211FamilyLegacy.kext```, ```IOSkywalkFamily.kext```, ```AMFIPass.kext```. Also these Kexts in a very high priority after Lilu and VirtualSMC.
+- Blocking Kexts: ```com.apple.iokit.IOSkywalkFamily```
+- Bootarg: ```-amfipassbeta```
+- ```csr-active-config = <03080000>```
+- ```SecureBootModel = Disabled``` (temporary, can be enabled after the OCLP Patcher)
+- ```DmgLoading = Any``` (temporary, can be set to Signed after the OCLP Patcher)
+
+After you have installed Sonoma, you need to run a tool called OCLP Patcher: https://dortania.github.io/OpenCore-Legacy-Patcher/BUILD.html
+
+Therefore you need to go into the Actions Tab of their Github page and search for a build that has an artifact, the OCLP GUI app.
+
+E.g. https://github.com/dortania/OpenCore-Legacy-Patcher/actions/runs/6216414710
+
+Run the OCLP Patcher an "Post-install Root Patch". It will run through if SecureBoot and SIP is disabled.
+
+<img src="Docs/OCLP_1.png" height="300">
+
+<img src="Docs/OCLP_2.png" height="500">
+
+After the reboot, you can enable SecureBoot again. Wifi will still work. 
+
+But as I said, you have to repeat these steps for every macOS update: 
+- ```Disable SecureBoot``` in BIOS
+- config.plist: ```SecureBootModel = Disabled``` and ```DmgLoading = Any```
+
 # Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D
 
 ![About this mac](Docs/macOSBigSur.png)
