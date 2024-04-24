@@ -732,7 +732,7 @@
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
-			<string>j185f</string>
+			<string>j137</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
