@@ -1,0 +1,25 @@
+name: tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+jobs:
+  ocvalidate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+        config: [
+          "config_iMac20,2_iGPU display output.plist",  
+          "config_iMac20,2_iGPU_computing_only.plist",  
+          "config_iMacPro1,1_requires AMD GPU.plist",  
+        ]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: brokeyourbike/ocvalidate-action@v0.3
+        with:
+          opencore-version: '0.9.2'
+
+      - run: ocvalidate "EFI/OC/${{ matrix.config }}"
